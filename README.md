@@ -91,7 +91,6 @@ Or via a `<script>` tag:
 Initialize once at the start of your application:
 
 ```javascript
-// Ignore if installed via a script tag.
 import { Uploader } from "uploader";
 
 // Get production API keys from Upload.io
@@ -104,10 +103,9 @@ const uploader = new Uploader({
 
 `react-uploader` provides two UI components:
 
-### (1) The File Upload Button
+### (1) File Upload Button
 
 ```javascript
-// Ignore if installed via a script tag.
 import { UploadButton } from "react-uploader";
 
 <UploadButton uploader={uploader}
@@ -121,10 +119,9 @@ import { UploadButton } from "react-uploader";
 </UploadButton>
 ```
 
-### (2) The Dropzone
+### (2) Dropzone
 
 ```javascript
-// Ignore if installed via a script tag.
 import { UploadDropzone } from "react-uploader";
 
 <UploadDropzone uploader={uploader}
