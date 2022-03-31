@@ -4,7 +4,7 @@
   </a>
 </h1>
 
-<p align="center"><b>React File Upload Component</b><br/> (React Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
+<p align="center"><b>React File Upload Component for <a href="https://upload.io/">Upload.io</a></b><br/> (React Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
 <br/>
 <p align="center">
   <a href="https://github.com/upload-io/uploader/">
@@ -40,6 +40,7 @@
 
 # Quick Start
 
+To create a file upload button:
 
 ```shell
 npm install react-uploader
@@ -104,7 +105,7 @@ const uploader = new Uploader({
 
 `react-uploader` provides two UI components:
 
-### Option 1: Creating a File Upload Button
+### Option 1) Creating a File Upload Button
 
 ```javascript
 // Ignore if installed via a script tag.
@@ -121,7 +122,7 @@ const { UploadButton } = require("react-uploader");
 </UploadButton>
 ```
 
-### Option 2: Creating a Dropzone
+### Option 2) Creating a Dropzone
 
 ```javascript
 // Ignore if installed via a script tag.
