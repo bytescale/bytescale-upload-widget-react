@@ -4,10 +4,10 @@
   </a>
 </h1>
 
-<p align="center"><b>React File & Image Uploader</b><br/> (React Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
+<p align="center"><b>React File Upload Component</b><br/> (React Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
 <br/>
 <p align="center">
-  <a href="https://github.com/upload-js/uploader/">
+  <a href="https://github.com/upload-io/uploader/">
     <img src="https://img.shields.io/badge/gzipped-29%20kb-4ba0f6" />
   </a>
 
@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/badge/uploader-npm-4ba0f6" />
   </a>
 
-  <a href="https://github.com/upload-js/uploader/actions/workflows/ci.yml">
+  <a href="https://github.com/upload-io/uploader/actions/workflows/ci.yml">
     <img src="https://img.shields.io/badge/build-passing-4ba0f6" />
   </a>
 
@@ -28,7 +28,7 @@
     <img src="https://img.shields.io/badge/TypeScript-included-4ba0f6" />
   </a>
 
-  <a href="https://github.com/upload-js/uploader/actions/workflows/ci.yml">
+  <a href="https://github.com/upload-io/uploader/actions/workflows/ci.yml">
     <img src="https://img.shields.io/npms-io/maintenance-score/upload-js?color=4ba0f6" />
   </a>
 
@@ -37,6 +37,34 @@
   </a>
 
 </p>
+
+# Quick Start
+
+
+```shell
+npm install react-uploader
+```
+
+```javascript
+const { UploadButton } = require("react-uploader");
+const { Uploader } = require("uploader");
+
+const uploader = new Uploader({
+  apiKey: "free" // Get production API keys from Upload.io
+});
+
+<UploadButton uploader={uploader}
+              options={{multi: true}}
+              onComplete={files => console.log(files)}>
+  {({onClick}) =>
+    <button onClick={onClick}>
+      Upload a file...
+    </button>
+  }
+</UploadButton>
+```
+
+# Documentation
 
 ## Installation
 
@@ -58,9 +86,7 @@ Or via a `<script>` tag:
 <script src="https://js.upload.io/react-uploader/v1"></script>
 ```
 
-## Usage
-
-### Initialize
+## Initialization
 
 Initialize once at the start of your application:
 
@@ -74,9 +100,11 @@ const uploader = new Uploader({
 });
 ```
 
-### Render a File Upload Component
+## Using the File Upload Components
 
-#### Option 1: Render a File Upload Button
+`react-uploader` provides two UI components:
+
+### Option 1: Creating a File Upload Button
 
 ```javascript
 // Ignore if installed via a script tag.
@@ -93,7 +121,7 @@ const { UploadButton } = require("react-uploader");
 </UploadButton>
 ```
 
-#### Option 2: Render a Dropzone
+### Option 2: Creating a Dropzone
 
 ```javascript
 // Ignore if installed via a script tag.
@@ -106,7 +134,7 @@ const { UploadDropzone } = require("react-uploader");
                 height="375px" />
 ```
 
-### The Result
+## The Result
 
 The `onComplete` callback returns a `Array<UploaderResult>`:
 
@@ -140,13 +168,13 @@ The `onComplete` callback returns a `Array<UploaderResult>`:
 
 `react-uploader` is a wrapper for `uploader`.
 
-Please see: **[Uploader Docs](https://github.com/upload-js/uploader#%EF%B8%8F-configuration)**.
+Please see: **[Uploader Docs](https://github.com/upload-io/uploader#%EF%B8%8F-configuration)**.
 
 ## Contribute
 
 If you would like to contribute to Uploader:
 
-1. Add a [GitHub Star](https://github.com/upload-js/uploader/stargazers) to the project (if you're feeling generous!).
+1. Add a [GitHub Star](https://github.com/upload-io/uploader/stargazers) to the project (if you're feeling generous!).
 2. Determine whether you're raising a bug, feature request or question.
 3. Raise your issue or PR.
 

@@ -1,26 +1,29 @@
-import {Uploader, UploaderResult, UploaderOptions} from "uploader";
+import { Uploader, UploaderResult, UploaderOptions } from "uploader";
 
 interface MouseEventLite {
-  preventDefault: () => void
+  preventDefault: () => void;
 }
 
 interface Props {
-  children: (props: {onClick: (event: MouseEventLite) => void}) => JSX.Element
-  onComplete?: (files: UploaderResult[]) => void
-  options?: UploaderOptions
-  uploader: Uploader
+  children: (props: { onClick: (event: MouseEventLite) => void }) => JSX.Element;
+  onComplete?: (files: UploaderResult[]) => void;
+  options?: UploaderOptions;
+  uploader: Uploader;
 }
 
-export const UploadButton = ({uploader, options, onComplete, children}: Props): JSX.Element => {
+export const UploadButton = ({ uploader, options, onComplete, children }: Props): JSX.Element => {
   const onClick = (e: MouseEventLite): void => {
-    e.preventDefault()
+    e.preventDefault();
 
-    uploader.open(options).then(files => {
-      if (onComplete !== undefined) {
-        onComplete(files)
-      }
-    }, error => console.error("Uploader error.", error))
-  }
+    uploader.open(options).then(
+      files => {
+        if (onComplete !== undefined) {
+          onComplete(files);
+        }
+      },
+      error => console.error("Uploader error.", error)
+    );
+  };
 
-  return children({onClick})
-}
+  return children({ onClick });
+};
