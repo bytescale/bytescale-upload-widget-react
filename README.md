@@ -38,7 +38,7 @@
 
 </p>
 
-# Quick Start
+# Quick Start — [Try on CodePen](https://codepen.io/upload-js/pen/popWJpX?editors=1010)
 
 To create a file upload button:
 
