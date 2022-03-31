@@ -2,7 +2,7 @@
   "name": "react-uploader",
   "version": "1.0.0",
   "author": "Upload <hello@upload.io> (https://upload.io)",
-  "description": "React Uploader | File & Image Uploader for React | Powered by Upload.io 🚀",
+  "description": "React Uploader | React File Upload Component | Powered by Upload.io 🚀",
   "license": "MIT",
   "main": "dist/main.js",
   "types": "dist/index.d.ts",
@@ -67,7 +67,7 @@
     "react": ">=16.3.0"
   },
   "dependencies": {
-    "uploader": "1.37.0"
+    "uploader": "1.37.2"
   },
   "devDependencies": {
     "@babel/cli": "7.17.6",
