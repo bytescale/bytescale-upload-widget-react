@@ -47,11 +47,12 @@ npm install react-uploader
 ```
 
 ```javascript
-const { UploadButton } = require("react-uploader");
-const { Uploader } = require("uploader");
+import { Uploader } from "uploader";
+import { UploadButton } from "react-uploader";
 
 const uploader = new Uploader({
-  apiKey: "free" // Get production API keys from Upload.io
+  // Get production API keys from Upload.io
+  apiKey: "free"
 });
 
 <UploadButton uploader={uploader}
@@ -93,7 +94,7 @@ Initialize once at the start of your application:
 
 ```javascript
 // Ignore if installed via a script tag.
-const { Uploader } = require("uploader");
+import { Uploader } from "uploader";
 
 // Get production API keys from Upload.io
 const uploader = new Uploader({
@@ -109,7 +110,7 @@ const uploader = new Uploader({
 
 ```javascript
 // Ignore if installed via a script tag.
-const { UploadButton } = require("react-uploader");
+import { UploadButton } from "react-uploader";
 
 <UploadButton uploader={uploader}
               options={{multi: true}}
@@ -126,7 +127,7 @@ const { UploadButton } = require("react-uploader");
 
 ```javascript
 // Ignore if installed via a script tag.
-const { UploadDropzone } = require("react-uploader");
+import { UploadDropzone } from "react-uploader";
 
 <UploadDropzone uploader={uploader}
                 options={{multi: true}}
