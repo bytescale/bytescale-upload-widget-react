@@ -66,9 +66,7 @@ const uploader = new Uploader({
 </UploadButton>
 ```
 
-# Documentation
-
-## Installation
+# Installation
 
 Install via NPM:
 
@@ -88,7 +86,7 @@ Or via a `<script>` tag:
 <script src="https://js.upload.io/react-uploader/v1"></script>
 ```
 
-## Initialization
+## Initialize
 
 Initialize once at the start of your application:
 
@@ -102,11 +100,11 @@ const uploader = new Uploader({
 });
 ```
 
-## Using the File Upload Components
+## Choose a Component
 
 `react-uploader` provides two UI components:
 
-### Option 1) Creating a File Upload Button
+### (1) The File Upload Button
 
 ```javascript
 // Ignore if installed via a script tag.
@@ -123,7 +121,7 @@ import { UploadButton } from "react-uploader";
 </UploadButton>
 ```
 
-### Option 2) Creating a Dropzone
+### (2) The Dropzone
 
 ```javascript
 // Ignore if installed via a script tag.
