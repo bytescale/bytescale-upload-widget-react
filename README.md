@@ -38,9 +38,11 @@
 
 </p>
 
-# Quick Start — [Try on CodePen](https://codepen.io/upload-js/pen/popWJpX?editors=1010)
+<h1 align="center">
+  Quick Start — <a href="https://codepen.io/upload-js/pen/popWJpX?editors=1010">Try on CodePen</a>
+</h1>
 
-To create a file upload button:
+<p align="center">To create a file upload button:</p>
 
 ```shell
 npm install react-uploader
