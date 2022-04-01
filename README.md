@@ -133,7 +133,7 @@ import { UploadDropzone } from "react-uploader";
 
 ## The Result
 
-The `onComplete` callback returns a `Array<UploaderResult>`:
+The `onComplete` callback receives a `Array<UploaderResult>`:
 
 ```javascript
 {
@@ -163,7 +163,7 @@ The `onComplete` callback returns a `Array<UploaderResult>`:
 
 ## Full Documentation
 
-`react-uploader` is a wrapper for `uploader`.
+`react-uploader` is a React wrapper for `uploader`.
 
 Please see: **[Uploader Docs](https://github.com/upload-io/uploader#%EF%B8%8F-configuration)**.
 
