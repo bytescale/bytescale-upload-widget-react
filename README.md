@@ -7,29 +7,29 @@
 <p align="center"><b>React File Upload Component for <a href="https://upload.io/">Upload.io</a></b><br/> (React Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
 <br/>
 <p align="center">
-  <a href="https://github.com/upload-io/uploader/">
+  <a href="https://github.com/upload-io/react-uploader/">
     <img src="https://img.shields.io/badge/gzipped-29%20kb-4ba0f6" />
   </a>
 
-  <a href="https://www.npmjs.com/package/uploader">
-    <img src="https://img.shields.io/badge/uploader-npm-4ba0f6" />
+  <a href="https://www.npmjs.com/package/react-uploader">
+    <img src="https://img.shields.io/badge/react--uploader-npm-4ba0f6" />
   </a>
 
-  <a href="https://github.com/upload-io/uploader/actions/workflows/ci.yml">
+  <a href="https://github.com/upload-io/react-uploader/actions/workflows/ci.yml">
     <img src="https://img.shields.io/badge/build-passing-4ba0f6" />
   </a>
 
-  <a href="https://www.npmjs.com/package/uploader">
-    <img src="https://img.shields.io/npm/dt/uploader?color=%234ba0f6" />
+  <a href="https://www.npmjs.com/package/react-uploader">
+    <img src="https://img.shields.io/npm/dt/react-uploader?color=%234ba0f6" />
   </a>
   <br/>
 
-  <a href="https://www.npmjs.com/package/uploader">
+  <a href="https://www.npmjs.com/package/react-uploader">
     <img src="https://img.shields.io/badge/TypeScript-included-4ba0f6" />
   </a>
 
-  <a href="https://github.com/upload-io/uploader/actions/workflows/ci.yml">
-    <img src="https://img.shields.io/npms-io/maintenance-score/uploader?color=4ba0f6" />
+  <a href="https://github.com/upload-io/react-uploader/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/npms-io/maintenance-score/react-uploader?color=4ba0f6" />
   </a>
 
   <a target="_blank" href="https://twitter.com/intent/tweet?text=I%20just%20found%20Uploader%20%26%20Upload.io%20%E2%80%94%20they%20make%20it%20super%20easy%20to%20upload%20files%20%E2%80%94%20installs%20with%207%20lines%20of%20code%20https%3A%2F%2Fgithub.com%2Fupload-io%2Fuploader&hashtags=javascript,opensource,js,webdev,developers&via=UploadJS">
