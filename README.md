@@ -128,7 +128,7 @@ import { UploadDropzone } from "react-uploader";
 
 <UploadDropzone uploader={uploader}
                 options={{multi: true}}
-                onComplete={files => console.log(files)}
+                onUpdate={files => console.log(files)}
                 width="600px"
                 height="375px" />
 ```
