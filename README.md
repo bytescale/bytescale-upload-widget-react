@@ -173,7 +173,7 @@ Please see: **[Uploader Docs](https://github.com/upload-io/uploader#%EF%B8%8F-co
 
 If you would like to contribute to Uploader:
 
-1. Add a [GitHub Star](https://github.com/upload-io/uploader/stargazers) to the project (if you're feeling generous!).
+1. Add a [GitHub Star](https://github.com/upload-io/react-uploader/stargazers) to the project (if you're feeling generous!).
 2. Determine whether you're raising a bug, feature request or question.
 3. Raise your issue or PR.
 
