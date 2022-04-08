@@ -4,7 +4,8 @@
   </a>
 </h1>
 
-<p align="center"><b>React File Upload Component for <a href="https://upload.io/">Upload.io</a></b><br/> (React Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
+<p align="center"><b>React File Upload Component</b><br/> (React Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
+
 <br/>
 <p align="center">
   <a href="https://github.com/upload-io/react-uploader/">
