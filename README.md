@@ -143,7 +143,7 @@ import { UploadDropzone } from "react-uploader";
 
 ## The Result
 
-The `onComplete` callback receives a `Array<UploaderResult>`:
+The callbacks receive a `Array<UploaderResult>`:
 
 ```javascript
 {
