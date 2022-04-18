@@ -4,7 +4,10 @@
   </a>
 </h1>
 
-<p align="center"><b>React File Upload Component</b><br/> (React Wrapper for <a href="https://upload.io/uploader">Uploader</a>)</p>
+<p align="center"><b>React File Upload Widget</b><br/> (With Integrated Cloud Storage)</p>
+
+<p align="center">React wrapper for <a href="https://upload.io/uploader">Uploader</a> • Files hosted on <a href="https://upload.io/">Upload.io</a><br/><br/></p>
+
 
 <br/>
 <p align="center">
