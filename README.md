@@ -1,14 +1,13 @@
 <h1 align="center">
   <a href="https://upload.io/uploader">
-    <img alt="Uploader" width="264" height="63" src="https://raw.githubusercontent.com/upload-io/react-uploader/main/.github/assets/logo.svg">
+    <img alt="Uploader" width="264" height="121" src="https://raw.githubusercontent.com/upload-io/react-uploader/main/.github/assets/logo.svg">
   </a>
 </h1>
 
 <p align="center"><b>React File Upload Widget</b><br/> (With Integrated Cloud Storage)</p>
 
-<p align="center">React wrapper for <a href="https://upload.io/uploader">Uploader</a> • Files hosted on <a href="https://upload.io/">Upload.io</a><br/><br/></p>
+<p align="center">React Wrapper for <a href="https://upload.io/uploader">Uploader</a> • Files Hosted on <a href="https://upload.io/">Upload.io</a><br/><br/></p>
 
-<br/>
 <p align="center">
   <a href="https://github.com/upload-io/react-uploader/">
     <img src="https://img.shields.io/badge/gzipped-29%20kb-4ba0f6" />
