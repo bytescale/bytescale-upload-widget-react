@@ -1,13 +1,12 @@
 <h1 align="center">
   <a href="https://upload.io/uploader">
-    <img alt="Uploader" width="276" height="80" src="https://raw.githubusercontent.com/upload-io/assets/master/logo-uploader.svg">
+    <img alt="Uploader" width="264" height="63" src="https://raw.githubusercontent.com/upload-io/react-uploader/main/.github/assets/logo.svg">
   </a>
 </h1>
 
 <p align="center"><b>React File Upload Widget</b><br/> (With Integrated Cloud Storage)</p>
 
 <p align="center">React wrapper for <a href="https://upload.io/uploader">Uploader</a> • Files hosted on <a href="https://upload.io/">Upload.io</a><br/><br/></p>
-
 
 <br/>
 <p align="center">
@@ -42,11 +41,17 @@
 
 </p>
 
+
 <h1 align="center">
-  Quick Start — <a href="https://codepen.io/upload-js/pen/popWJpX?editors=1010">Try on CodePen</a>
+  Quick Start —
+  <a href="https://codepen.io/upload-js/pen/popWJpX?editors=1010">
+    Try on CodePen
+  </a>
 </h1>
 
-<p align="center">To create a file upload button:</p>
+<p align="center"><a href="https://upload.io/uploader"><img alt="Upload Widget Demo" width="100%" src="https://raw.githubusercontent.com/upload-io/react-uploader/main/.github/assets/demo.webp"></a></p>
+
+<p align="center">To implement the above widget:</p>
 
 ```shell
 npm install react-uploader
