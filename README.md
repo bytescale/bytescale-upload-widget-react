@@ -133,7 +133,7 @@ import { UploadButton } from "react-uploader";
 
 Required props:
 - `uploader`
-- `children` (must be a component constructor, per the example)
+- `children`
 
 Optional props:
 - `options`
