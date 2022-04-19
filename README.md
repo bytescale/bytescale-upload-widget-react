@@ -96,7 +96,7 @@ Or via a `<script>` tag:
 <script src="https://js.upload.io/react-uploader/v1"></script>
 ```
 
-## Usage
+# Usage
 
 Initialize once at the start of your application:
 
@@ -111,7 +111,11 @@ const uploader = new Uploader({
 
 Then choose a UI component:
 
-### (1) File Upload Button
+## `UploadButton`
+
+The `UploadButton` component uses a [render prop](https://reactjs.org/docs/render-props.html) to provide an `onClick` callback to your button element.
+
+When the `onClick` is called, a file upload modal will appear:
 
 ```javascript
 import { UploadButton } from "react-uploader";
@@ -127,7 +131,18 @@ import { UploadButton } from "react-uploader";
 </UploadButton>
 ```
 
-### (2) Dropzone
+Required props:
+- `uploader`
+- `children` (must be a component constructor, per the example)
+
+Optional props:
+- `options`
+- `onComplete`
+
+
+## `UploadDropzone`
+
+Renders an inline drag-and-drop file upload dropzone:
 
 ```javascript
 import { UploadDropzone } from "react-uploader";
@@ -138,6 +153,17 @@ import { UploadDropzone } from "react-uploader";
                 width="600px"
                 height="375px" />
 ```
+
+
+Required props:
+- `uploader`
+
+Optional props:
+- `options`
+- `onUpdate`
+- `width`
+- `height`
+
 
 ## The Result
 
