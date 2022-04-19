@@ -37,6 +37,7 @@
     "file",
     "upload",
     "input",
+    "dropzone",
     "multi",
     "multipart",
     "ajax",
