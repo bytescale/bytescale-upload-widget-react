@@ -206,13 +206,11 @@ Upload.io benefits developers with:
 
 - Zero Setup (Start uploading in the next few minutes!)
 - Pre-Integrated Storage (All you need is an Upload API key)
-- Fast File Hosting (300-Point CDN)
+- Fast File Hosting (Worldwide CDN, 300 Nodes)
 - Powerful Rules Engine (Rate Limiting, Traffic Limiting, IP Blacklisting, Expiring Links, etc)
 - File Transformations (Image Resizing, Cropping, Optimization, etc)
 
 ### Can I bring my own file storage?
-
-There are many file uploaders in the Open Source space that provide DIY-integration with storage backends, a.k.a. bring your own infrastructure (BYOI).
 
 Uploader's USP is to provide developers with the least amount of work possible, while remaining customizable. As such, Uploader will always be closely integrated with the Upload.io platform, and there are currently no plans to support custom backends. You may, however, sync files from your Upload.io account to a custom storage target.
 
