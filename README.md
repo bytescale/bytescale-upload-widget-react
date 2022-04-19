@@ -109,13 +109,13 @@ const uploader = new Uploader({
 });
 ```
 
-Then choose a UI component:
+Next, choose a UI component:
 
 ## `UploadButton`
 
 The `UploadButton` component uses a [render prop](https://reactjs.org/docs/render-props.html) to provide an `onClick` callback to your button element.
 
-When the `onClick` is called, a file upload modal will appear:
+When clicked, a file upload modal will appear:
 
 ```javascript
 import { UploadButton } from "react-uploader";
@@ -139,10 +139,9 @@ Optional props:
 - `options`
 - `onComplete`
 
-
 ## `UploadDropzone`
 
-Renders an inline drag-and-drop file upload dropzone:
+The `UploadDropzone` component renders an inline drag-and-drop file upload dropzone:
 
 ```javascript
 import { UploadDropzone } from "react-uploader";
