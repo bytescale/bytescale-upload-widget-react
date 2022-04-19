@@ -6,7 +6,7 @@
 
 <p align="center"><b>React File Upload Widget</b><br/> (With Integrated Cloud Storage)</p>
 
-<p align="center">React Wrapper for <a href="https://upload.io/uploader">Uploader</a> • Files Hosted on <a href="https://upload.io/">Upload.io</a><br/><br/></p>
+<p align="center">React Wrapper for <a href="https://upload.io/uploader">Uploader</a> • Developed by <a href="https://upload.io/">Upload.io</a><br/><br/></p>
 
 <p align="center">
   <a href="https://github.com/upload-io/react-uploader/">
@@ -96,7 +96,7 @@ Or via a `<script>` tag:
 <script src="https://js.upload.io/react-uploader/v1"></script>
 ```
 
-## Initialize
+## Usage
 
 Initialize once at the start of your application:
 
@@ -109,9 +109,7 @@ const uploader = new Uploader({
 });
 ```
 
-## Choose a Component
-
-`react-uploader` provides two UI components:
+Then choose a UI component:
 
 ### (1) File Upload Button
 
@@ -173,9 +171,25 @@ The callbacks receive a `Array<UploaderResult>`:
 
 ## Full Documentation
 
-`react-uploader` is a React wrapper for `uploader`.
+React Uploader is a wrapper for Uploader — see the **[Uploader Docs](https://github.com/upload-io/uploader#%EF%B8%8F-configuration)** 📖
 
-Please see: **[Uploader Docs](https://github.com/upload-io/uploader#%EF%B8%8F-configuration)**.
+## Where are my files stored?
+
+Uploader uses [Upload.io](https://upload.io) as a storage and file hosting backend.
+
+Upload.io benefits developers with:
+
+- Zero Setup (Start uploading in the next few minutes!)
+- Pre-Integrated Storage (All you need is an Upload API key)
+- Fast File Hosting (300-Point CDN)
+- Powerful Rules Engine (Rate Limiting, Traffic Limiting, IP Blacklisting, Expiring Links, etc)
+- File Transformations (Image Resizing, Cropping, Optimization, etc)
+
+### Can I bring my own file storage?
+
+There are many file uploaders in the Open Source space that provide DIY-integration with storage backends, a.k.a. bring your own infrastructure (BYOI).
+
+Uploader's USP is to provide developers with the least amount of work possible, while remaining customizable. As such, Uploader will always be closely integrated with the Upload.io platform, and there are currently no plans to support custom backends. You may, however, sync files from your Upload.io account to a custom storage target.
 
 ## Contribute
 
