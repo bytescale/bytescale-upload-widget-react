@@ -109,7 +109,7 @@ const uploader = new Uploader({
 });
 ```
 
-Next, choose a UI component:
+Then choose a UI component:
 
 ## `UploadButton`
 
