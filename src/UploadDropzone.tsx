@@ -1,5 +1,5 @@
 import { Uploader, UploaderResult, UploaderOptions } from "uploader";
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { useElementRef } from "react-uploader/Utils";
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
   width?: string;
 }
 
-export const UploadDropzone = ({ uploader, options, onComplete, onUpdate, width, height }: Props): JSX.Element => {
+const UploadDropzoneInner = ({ uploader, options, onComplete, onUpdate, width, height }: Props): JSX.Element => {
   const [element, elementRef] = useElementRef();
 
   useLayoutEffect(() => {
@@ -42,4 +42,12 @@ export const UploadDropzone = ({ uploader, options, onComplete, onUpdate, width,
       style={{ position: "relative", width: "100%", maxWidth: width ?? "600px", height: height ?? "375px" }}
     />
   );
+};
+
+// We use 'JSON.stringify(props.options)' to force a reinitialization when options like colour and tags change.
+// Unfortunately this won't trigger a re-render in the event of a callback changing.
+// JSON.stringify will simply elide non-serializable fields like functions.
+export const UploadDropzone = (props: Props): JSX.Element => {
+  const [id] = useState(Math.random().toString());
+  return <UploadDropzoneInner {...props} key={`${id}-${JSON.stringify(props.options)}`} />;
 };
