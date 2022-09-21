@@ -1,4 +1,4 @@
-import { Uploader, UploaderResult, UploaderOptions } from "uploader";
+import { UploaderInterface, UploaderResult, UploaderOptions } from "uploader";
 
 interface MouseEventLite {
   preventDefault: () => void;
@@ -8,7 +8,7 @@ interface Props {
   children: (props: { onClick: (event: MouseEventLite) => void }) => JSX.Element;
   onComplete?: (files: UploaderResult[]) => void;
   options?: UploaderOptions;
-  uploader: Uploader;
+  uploader: UploaderInterface;
 }
 
 export const UploadButton = ({ uploader, options, onComplete, children }: Props): JSX.Element => {

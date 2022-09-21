@@ -1,4 +1,4 @@
-import { Uploader, UploaderResult, UploaderOptions } from "uploader";
+import { UploaderInterface, UploaderResult, UploaderOptions } from "uploader";
 import React, { useLayoutEffect } from "react";
 import { useElementRef } from "react-uploader/Utils";
 
@@ -7,7 +7,7 @@ interface Props {
   onComplete?: (files: UploaderResult[]) => void;
   onUpdate?: (files: UploaderResult[]) => void;
   options?: UploaderOptions;
-  uploader: Uploader;
+  uploader: UploaderInterface;
   width?: string;
 }
 

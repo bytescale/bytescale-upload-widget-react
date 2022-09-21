@@ -60,7 +60,7 @@ npm install react-uploader
 import { Uploader } from "uploader";
 import { UploadButton } from "react-uploader";
 
-const uploader = new Uploader({
+const uploader = Uploader({
   // Get production API keys from Upload.io
   apiKey: "free"
 });
@@ -104,7 +104,7 @@ Initialize once at the start of your application:
 import { Uploader } from "uploader";
 
 // Get production API keys from Upload.io
-const uploader = new Uploader({
+const uploader = Uploader({
   apiKey: "free"
 });
 ```

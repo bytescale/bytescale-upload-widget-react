@@ -5,7 +5,7 @@ import Adapter from "enzyme-adapter-react-16";
 import { UploadDropzone } from "react-uploader/UploadDropzone";
 
 (global as any).ResizeObserver = require("resize-observer-polyfill");
-const uploader = new Uploader({ apiKey: "free" });
+const uploader = Uploader({ apiKey: "free" });
 configure({ adapter: new Adapter() });
 
 describe("UploadDropzone Component", () => {
