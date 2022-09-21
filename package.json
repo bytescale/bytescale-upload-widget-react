@@ -1,6 +1,6 @@
 {
   "name": "react-uploader",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "author": "Upload <hello@upload.io> (https://upload.io)",
   "description": "React File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
@@ -73,7 +73,7 @@
     "react": ">=16.3.0"
   },
   "dependencies": {
-    "uploader": "^2.0.0-alpha.1"
+    "uploader": "^2.0.0-alpha.2"
   },
   "devDependencies": {
     "@babel/cli": "7.17.6",
