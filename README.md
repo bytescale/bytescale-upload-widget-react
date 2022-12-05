@@ -93,7 +93,7 @@ yarn add react-uploader
 Or via a `<script>` tag:
 
 ```html
-<script src="https://js.upload.io/react-uploader/v1"></script>
+<script src="https://js.upload.io/react-uploader/v2"></script>
 ```
 
 # Usage
@@ -171,6 +171,7 @@ The callbacks receive a `Array<UploaderResult>`:
 ```javascript
 {
   fileUrl: "https://upcdn.io/FW25...",   // URL to use when serving this file.
+  filePath: "/uploads/example.jpg",      // File path (we recommend saving this to your database).
 
   editedFile: undefined,                 // Edited file (for image crops). Same structure as below.
 
