@@ -16,7 +16,7 @@ module.exports = {
   output: {
     ...config.output,
     filename: `v${majorVersion}.js`,
-    libraryTarget: "umd"
+    libraryTarget: "window"
   },
   // Important: causes all dependencies to be bundled into one JS file.
   externals: {
