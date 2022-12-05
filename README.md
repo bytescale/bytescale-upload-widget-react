@@ -43,7 +43,7 @@
 
 <h1 align="center">
   Quick Start —
-  <a href="https://codepen.io/upload-js/pen/popWJpX?editors=1010">
+  <a href="https://codepen.io/upload-js/pen/popWJpX?editors=0010">
     Try on CodePen
   </a>
 </h1>
@@ -96,39 +96,35 @@ Or via a `<script>` tag:
 <script src="https://js.upload.io/react-uploader/v2"></script>
 ```
 
-# Usage
-
-Initialize once at the start of your application:
-
-```javascript
-import { Uploader } from "uploader";
-
-// Get production API keys from Upload.io
-const uploader = Uploader({
-  apiKey: "free"
-});
-```
-
-Then choose a UI component:
-
-## `UploadButton`
+## UploadButton — [Try on CodePen](https://codepen.io/upload-js/pen/popWJpX?editors=0010)
 
 The `UploadButton` component uses a [render prop](https://reactjs.org/docs/render-props.html) to provide an `onClick` callback to your button element.
 
 When clicked, a file upload modal will appear:
 
 ```javascript
+import { Uploader } from "uploader"; // Installed by "react-uploader".
 import { UploadButton } from "react-uploader";
 
-<UploadButton uploader={uploader}
-              options={{multi: true}}
-              onComplete={files => console.log(files)}>
-  {({onClick}) =>
-    <button onClick={onClick}>
-      Upload a file...
-    </button>
-  }
-</UploadButton>
+// Initialize once (at the start of your app).
+const uploader = Uploader({
+  apiKey: "free" // Get production API keys from Upload.io
+});
+
+// Configuration options: https://upload.io/uploader#customize
+const options = { multi: true };
+
+const MyApp = () => (
+  <UploadButton uploader={uploader}
+                options={options}
+                onComplete={files => alert(files.map(x => x.fileUrl).join("\n"))}>
+    {({onClick}) =>
+      <button onClick={onClick}>
+        Upload a file...
+      </button>
+    }
+  </UploadButton>
+);
 ```
 
 Required props:
@@ -139,20 +135,30 @@ Optional props:
 - `options`
 - `onComplete`
 
-## `UploadDropzone`
+## UploadDropzone — [Try on CodePen](https://codepen.io/upload-js/pen/LYrMzaB?editors=0010)
 
 The `UploadDropzone` component renders an inline drag-and-drop file upload dropzone:
 
 ```javascript
-import { UploadDropzone } from "react-uploader";
+import { Uploader } from "uploader"; // Installed by "react-uploader".
+import { UploadButton } from "react-uploader";
 
-<UploadDropzone uploader={uploader}
-                options={{multi: true}}
-                onUpdate={files => console.log(files)}
-                width="600px"
-                height="375px" />
+// Initialize once (at the start of your app).
+const uploader = Uploader({
+  apiKey: "free" // Get production API keys from Upload.io
+});
+
+// Configuration options: https://upload.io/uploader#customize
+const options = { multi: true };
+
+const MyApp = () => (
+  <UploadDropzone uploader={uploader}
+                  options={options}
+                  onUpdate={files => alert(files.map(x => x.fileUrl).join("\n"))}
+                  width="600px"
+                  height="375px" />
+);
 ```
-
 
 Required props:
 - `uploader`
@@ -214,7 +220,7 @@ Upload.io benefits developers with:
 
 ### 🔧 Can I bring my own file storage?
 
-Uploader's USP is to provide the fastest way to integrate end-to-end file uploads into a web app, while remaining customizable. As such, Uploader will always be closely integrated with the Upload.io platform, and there are currently no plans to support custom backends. You may, however, sync files from your Upload.io account to a custom storage target.
+**Yes!**  [Upload.io](https://upload.io) supports custom S3 buckets. You are still required to create an account.
 
 ## Contribute
 
