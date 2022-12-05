@@ -16,12 +16,22 @@ module.exports = {
   output: {
     ...config.output,
     filename: `v${majorVersion}.js`,
-    libraryTarget: "window"
+    libraryTarget: "umd"
   },
   // Important: causes all dependencies to be bundled into one JS file.
   externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
+    "react": {
+      root: "React",
+      commonjs: "react",
+      commonjs2: "react",
+      amd: "react"
+    },
+    "react-dom": {
+      root: "ReactDOM",
+      commonjs: "react-dom",
+      commonjs2: "react-dom",
+      amd: "react-dom"
+    }
   },
   resolve: {
     ...config.resolve,
