@@ -1,6 +1,6 @@
 import { UploaderInterface, UploaderResult, UploaderOptions } from "uploader";
 import React, { useLayoutEffect } from "react";
-import { useElementRef } from "react-uploader/Utils";
+import { useElementRef } from "./Utils";
 
 interface Props {
   height?: string;
