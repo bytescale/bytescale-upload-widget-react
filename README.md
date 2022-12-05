@@ -203,9 +203,11 @@ Upload.io benefits developers with:
 - Powerful Rules Engine (Rate Limiting, Traffic Limiting, IP Blacklisting, Expiring Links, etc)
 - File Transformations (Image Resizing, Cropping, Optimization, etc)
 
-### 🔧 Can I bring my own file storage?
+## 🔧 Can I bring my own file storage?
 
-**Yes!** [Upload.io](https://upload.io) supports custom S3 buckets. You are still required to [create an Upload.io account](https://upload.io).
+**Yes!** [Upload.io](https://upload.io) supports custom S3 buckets.
+
+You will still need to [create an Upload.io account](https://upload.io).
 
 ## Contribute
 
