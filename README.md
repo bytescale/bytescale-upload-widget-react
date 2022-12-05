@@ -205,7 +205,7 @@ Upload.io benefits developers with:
 
 ### 🔧 Can I bring my own file storage?
 
-**Yes!**  [Upload.io](https://upload.io) supports custom S3 buckets. You are still required to create an account.
+**Yes!** [Upload.io](https://upload.io) supports custom S3 buckets. You are still required to [create an Upload.io account](https://upload.io).
 
 ## Contribute
 
