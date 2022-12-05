@@ -3,18 +3,15 @@
     <img alt="React Uploader" width="264" height="106" src="https://raw.githubusercontent.com/upload-io/react-uploader/main/.github/assets/logo.svg">
   </a>
 </h1>
-
 <p align="center"><b>React File Upload Widget</b><br/> (With Integrated Cloud Storage)</p>
-
-<p align="center">React Wrapper for <a href="https://upload.io/uploader">Uploader</a> • Developed by <a href="https://upload.io/">Upload.io</a><br/><br/></p>
-
+<br/>
 <p align="center">
   <a href="https://github.com/upload-io/react-uploader/">
-    <img src="https://img.shields.io/badge/gzipped-29%20kb-4ba0f6" />
+    <img src="https://img.shields.io/badge/gzipped-6%20kb-4ba0f6" />
   </a>
 
   <a href="https://www.npmjs.com/package/react-uploader">
-    <img src="https://img.shields.io/badge/react--uploader-npm-4ba0f6" />
+    <img src="https://img.shields.io/badge/upload--js-npm-4ba0f6" />
   </a>
 
   <a href="https://github.com/upload-io/react-uploader/actions/workflows/ci.yml">
@@ -39,10 +36,8 @@
   </a>
 
 </p>
-
-
 <h1 align="center">
-  Quick Start —
+  Get Started —
   <a href="https://codepen.io/upload-js/pen/popWJpX?editors=0010">
     Try on CodePen
   </a>
@@ -50,31 +45,19 @@
 
 <p align="center"><a href="https://upload.io/uploader"><img alt="Upload Widget Demo" width="100%" src="https://raw.githubusercontent.com/upload-io/react-uploader/main/.github/assets/demo.webp"></a></p>
 
-<p align="center">To implement the above widget:</p>
+<p align="center">100% Serverless File Upload Widget  <br /> Powered by <a href="https://upload.io/">Upload.io</a><br/><br/></p>
 
-```shell
-npm install react-uploader
-```
+<hr/>
 
-```javascript
-import { Uploader } from "uploader";
-import { UploadButton } from "react-uploader";
+<p align="center"><a href="https://upload.io/dmca" rel="nofollow">DMCA Compliant</a> • <a href="https://upload.io/dpa" rel="nofollow">GDPR Compliant</a> • <a href="https://upload.io/sla" rel="nofollow">99.9% Uptime SLA</a>
+  <br/>
+  <b>Supports:</b> Rate Limiting, Volume Limiting, File Size &amp; Type Limiting, JWT Auth, and more...
+  <br />
+</p>
 
-const uploader = Uploader({
-  // Get production API keys from Upload.io
-  apiKey: "free"
-});
-
-<UploadButton uploader={uploader}
-              options={{multi: true}}
-              onComplete={files => console.log(files)}>
-  {({onClick}) =>
-    <button onClick={onClick}>
-      Upload a file...
-    </button>
-  }
-</UploadButton>
-```
+<hr/>
+<br />
+<br />
 
 # Installation
 
@@ -95,6 +78,8 @@ Or via a `<script>` tag:
 ```html
 <script src="https://js.upload.io/react-uploader/v2"></script>
 ```
+
+# Usage
 
 ## UploadButton — [Try on CodePen](https://codepen.io/upload-js/pen/popWJpX?editors=0010)
 
