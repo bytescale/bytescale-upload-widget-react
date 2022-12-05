@@ -19,7 +19,10 @@ module.exports = {
     libraryTarget: "umd"
   },
   // Important: causes all dependencies to be bundled into one JS file.
-  externals: [],
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
+  },
   resolve: {
     ...config.resolve,
     modules: [
