@@ -39,7 +39,13 @@ export const UploadDropzone = ({ uploader, options, onComplete, onUpdate, width,
   return (
     <div
       ref={elementRef}
-      style={{ position: "relative", width: "100%", maxWidth: width ?? "600px", height: height ?? "375px" }}
+      style={{
+        position: "relative",
+        width: "100%",
+        minWidth: "280px",
+        maxWidth: width ?? "600px",
+        height: height ?? "375px"
+      }}
     />
   );
 };
