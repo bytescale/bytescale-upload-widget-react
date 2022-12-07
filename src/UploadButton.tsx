@@ -1,4 +1,4 @@
-import { UploaderInterface, UploaderResult, UploaderOptions } from "uploader";
+import { UploaderInterface, UploadWidgetResult, UploadWidgetConfig } from "uploader";
 
 interface MouseEventLite {
   preventDefault: () => void;
@@ -6,8 +6,8 @@ interface MouseEventLite {
 
 interface Props {
   children: (props: { onClick: (event: MouseEventLite) => void }) => JSX.Element;
-  onComplete?: (files: UploaderResult[]) => void;
-  options?: UploaderOptions;
+  onComplete?: (files: UploadWidgetResult[]) => void;
+  options?: UploadWidgetConfig;
   uploader: UploaderInterface;
 }
 

@@ -1,12 +1,12 @@
-import { UploaderInterface, UploaderResult, UploaderOptions } from "uploader";
+import { UploaderInterface, UploadWidgetResult, UploadWidgetConfig } from "uploader";
 import React, { useLayoutEffect } from "react";
 import { useElementRef } from "./Utils";
 
 interface Props {
   height?: string;
-  onComplete?: (files: UploaderResult[]) => void;
-  onUpdate?: (files: UploaderResult[]) => void;
-  options?: UploaderOptions;
+  onComplete?: (files: UploadWidgetResult[]) => void;
+  onUpdate?: (files: UploadWidgetResult[]) => void;
+  options?: UploadWidgetConfig;
   uploader: UploaderInterface;
   width?: string;
 }
@@ -16,7 +16,7 @@ export const UploadDropzone = ({ uploader, options, onComplete, onUpdate, width,
 
   useLayoutEffect(() => {
     if (element !== undefined) {
-      const onUpdateParams: UploaderOptions = onUpdate === undefined ? {} : { onUpdate };
+      const onUpdateParams: UploadWidgetConfig = onUpdate === undefined ? {} : { onUpdate };
 
       uploader
         .open({

@@ -157,7 +157,7 @@ Optional props:
 
 ## The Result
 
-The callbacks receive a `Array<UploaderResult>`:
+The callbacks receive a `Array<UploadWidgetResult>`:
 
 ```javascript
 {
