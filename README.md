@@ -7,11 +7,11 @@
 <br/>
 <p align="center">
   <a href="https://github.com/upload-io/react-uploader/">
-    <img src="https://img.shields.io/badge/gzipped-6%20kb-4ba0f6" />
+    <img src="https://img.shields.io/badge/gzipped-33%20kb-4ba0f6" />
   </a>
 
   <a href="https://www.npmjs.com/package/react-uploader">
-    <img src="https://img.shields.io/badge/upload--js-npm-4ba0f6" />
+    <img src="https://img.shields.io/badge/react--uploader-npm-4ba0f6" />
   </a>
 
   <a href="https://github.com/upload-io/react-uploader/actions/workflows/ci.yml">
