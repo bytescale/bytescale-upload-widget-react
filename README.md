@@ -76,7 +76,7 @@ yarn add react-uploader
 Or via a `<script>` tag:
 
 ```html
-<script src="https://js.upload.io/react-uploader/v2"></script>
+<script src="https://js.upload.io/react-uploader/v3"></script>
 ```
 
 # Usage
