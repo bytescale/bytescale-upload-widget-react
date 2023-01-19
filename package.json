@@ -16,7 +16,8 @@
     "url": "https://github.com/upload-io/react-uploader/issues"
   },
   "files": [
-    "/dist/*"
+    "/dist/*",
+    "/tests/*"
   ],
   "keywords": [
     "react",
