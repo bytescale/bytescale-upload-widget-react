@@ -3,7 +3,9 @@ import React, { useLayoutEffect } from "react";
 import { useElementRef } from "./Utils";
 
 interface Props {
+  className?: string;
   height?: string;
+  minWidth?: string;
   onComplete?: (files: UploadWidgetResult[]) => void;
   onUpdate?: (files: UploadWidgetResult[]) => void;
   options?: UploadWidgetConfig;
@@ -11,8 +13,18 @@ interface Props {
   width?: string;
 }
 
-export const UploadDropzone = ({ uploader, options, onComplete, onUpdate, width, height }: Props): JSX.Element => {
+export const UploadDropzone = ({
+  uploader,
+  options,
+  onComplete,
+  onUpdate,
+  minWidth,
+  width,
+  height,
+  className
+}: Props): JSX.Element => {
   const [element, elementRef] = useElementRef();
+  const classNameProp = className === undefined ? {} : { className };
 
   useLayoutEffect(() => {
     if (element !== undefined) {
@@ -38,11 +50,12 @@ export const UploadDropzone = ({ uploader, options, onComplete, onUpdate, width,
 
   return (
     <div
+      {...classNameProp}
       ref={elementRef}
       style={{
         position: "relative",
         width: "100%",
-        minWidth: "280px",
+        minWidth: minWidth ?? "280px",
         maxWidth: width ?? "600px",
         height: height ?? "375px"
       }}
