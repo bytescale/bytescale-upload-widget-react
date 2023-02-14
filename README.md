@@ -154,7 +154,6 @@ Optional props:
 - `width`
 - `height`
 
-
 ## The Result
 
 The callbacks receive a `Array<UploadWidgetResult>`:
@@ -187,35 +186,82 @@ The callbacks receive a `Array<UploadWidgetResult>`:
 }
 ```
 
+# Image Processing (Resize, Crop, etc.)
+
+The [Upload.io](https://upload.io/) platform includes a built-in [Image Processing API](https://upload.io/docs/image-processing-api), which supports the following:
+
+- [Automatic Image Cropping](https://upload.io/docs/image-processing-api#crop)
+- [Manual Image Cropping](https://upload.io/docs/image-processing-api#crop-x)
+- [Image Resizing](https://upload.io/docs/image-processing-api#fit)
+- [Text Layering (e.g for text watermarks)](https://upload.io/docs/image-processing-api#text)
+- [Image Layering (e.g. for image watermarks)](https://upload.io/docs/image-processing-api#image)
+- [Adjustments (blur, sharpen, brightness, etc.)](https://upload.io/docs/image-processing-api#blur)
+- and more...
+
+### Original Image
+
+Here's an example using [a photo of Chicago](https://upcdn.io/W142hJk/raw/example/city-landscape.jpg):
+
+<img src="https://upcdn.io/W142hJk/raw/example/city-landscape.jpg" />
+
+```
+https://upcdn.io/W142hJk/raw/example/city-landscape.jpg
+```
+
+### Processed Image
+
+You can use the [Image Processing API](https://upload.io/docs/image-processing-api) to convert the above photo into [this processed image](https://upcdn.io/W142hJk/image/example/city-landscape.jpg?w=900&h=600&fit=crop&f=webp&q=80&blur=4&text=WATERMARK&layer-opacity=80&blend=overlay&layer-rotate=315&font-size=100&padding=10&font-weight=900&color=ffffff&repeat=true&text=Chicago&gravity=bottom&padding-x=50&padding-bottom=20&font=/example/fonts/Lobster.ttf&color=ffe400):
+
+<img src="https://upcdn.io/W142hJk/image/example/city-landscape.jpg?w=900&h=600&fit=crop&f=webp&q=80&blur=4&text=WATERMARK&layer-opacity=80&blend=overlay&layer-rotate=315&font-size=100&padding=10&font-weight=900&color=ffffff&repeat=true&text=Chicago&gravity=bottom&padding-x=50&padding-bottom=20&font=/example/fonts/Lobster.ttf&color=ffe400" />
+
+```
+https://upcdn.io/W142hJk/image/example/city-landscape.jpg
+  ?w=900
+  &h=600
+  &fit=crop
+  &f=webp
+  &q=80
+  &blur=4
+  &text=WATERMARK
+  &layer-opacity=80
+  &blend=overlay
+  &layer-rotate=315
+  &font-size=100
+  &padding=10
+  &font-weight=900
+  &color=ffffff
+  &repeat=true
+  &text=Chicago
+  &gravity=bottom
+  &padding-x=50
+  &padding-bottom=20
+  &font=/example/fonts/Lobster.ttf
+  &color=ffe400
+```
+
 ## Full Documentation
 
-React Uploader is a wrapper for Uploader — see the **[Uploader Docs](https://github.com/upload-io/uploader#%EF%B8%8F-configuration)** 📖
+[React Uploader Documentation »](https://upload.io/docs/upload-widget/frameworks/react)
 
-## Where are my files stored?
+## Need a Headless (no UI) File Upload Library?
 
-Uploader uses [Upload.io](https://upload.io) as a file storage & file hosting backend.
+[Try Upload.js »](https://upload.io/upload-js)
 
-Upload.io benefits developers with:
+## Can I use my own storage?
 
-- Zero Setup (Start uploading in the next few minutes!)
-- Pre-Integrated Storage (All you need is an Upload API key)
-- Fast File Hosting (Worldwide CDN, 300 Nodes)
-- Powerful Rules Engine (Rate Limiting, Traffic Limiting, IP Blacklisting, Expiring Links, etc)
-- File Transformations (Image Resizing, Cropping, Optimization, etc)
+**Yes!** [Upload.io](https://upload.io) supports custom S3 buckets on [Upload Plus](https://upload.io/pricing) plans.
 
-## 🔧 Can I bring my own file storage?
+For ease and simplicity, your files are stored in Upload.io's internal S3 buckets by default. You can change this on a folder-by-folder basis — to use your existing S3 bucket(s) — in the Upload Dashboard.
 
-**Yes!** [Upload.io](https://upload.io) supports custom S3 buckets.
+## 👋 Create your Upload.io Account
 
-You still need [an Upload.io account](https://upload.io) to use the widget.
+React Uploader is the React file upload component for [Upload.io](https://upload.io/): the file upload service for web apps.
 
-## Contribute
+**[Create an Upload.io account »](https://upload.io/upload-js/get-started)**
 
-If you would like to contribute to Uploader:
+## Building From Source
 
-1. Add a [GitHub Star](https://github.com/upload-io/react-uploader/stargazers) to the project (if you're feeling generous!).
-2. Determine whether you're raising a bug, feature request or question.
-3. Raise your issue or PR.
+[BUILD.md](BUILD.md)
 
 ## License
 
