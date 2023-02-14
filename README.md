@@ -186,9 +186,32 @@ The callbacks receive a `Array<UploadWidgetResult>`:
 }
 ```
 
-# Image Processing (Resize, Crop, etc.)
+# 🌐 API Support
 
-The [Upload.io](https://upload.io/) platform includes a built-in [Image Processing API](https://upload.io/docs/image-processing-api), which supports the following:
+## 🌐 File Management API
+
+Upload.io provides an [Upload API](https://upload.io/docs/upload-api) that allows you to:
+
+- File uploading.
+- File listing.
+- File deleting.
+- And more...
+
+Uploading a `"Hello World"` text file is as simple as:
+
+```shell
+curl --data "Hello World" \
+     -u apikey:free \
+     -X POST "https://api.upload.io/v1/files/basic"
+```
+
+_Note: Remember to set `-H "Content-Type: mime/type"` when uploading other file types!_
+
+[Read the Upload API docs »](https://upload.io/docs/upload-api)
+
+## 🌐 Image Processing API (Resize, Crop, etc.)
+
+Upload.io also provides an [Image Processing API](https://upload.io/docs/image-processing-api), which supports the following:
 
 - [Automatic Image Cropping](https://upload.io/docs/image-processing-api#crop)
 - [Manual Image Cropping](https://upload.io/docs/image-processing-api#crop-x)
@@ -197,6 +220,8 @@ The [Upload.io](https://upload.io/) platform includes a built-in [Image Processi
 - [Image Layering (e.g. for image watermarks)](https://upload.io/docs/image-processing-api#image)
 - [Adjustments (blur, sharpen, brightness, etc.)](https://upload.io/docs/image-processing-api#blur)
 - and more...
+
+[Read the Image Processing API docs »](https://upload.io/docs/image-processing-api)
 
 ### Original Image
 
