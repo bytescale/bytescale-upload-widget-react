@@ -1,6 +1,6 @@
 {
   "name": "react-uploader",
-  "version": "3.15.0",
+  "version": "3.16.0",
   "author": "Upload <hello@upload.io> (https://upload.io)",
   "description": "React File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
