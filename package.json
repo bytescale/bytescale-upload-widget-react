@@ -74,7 +74,7 @@
     "react": ">=16.3.0"
   },
   "dependencies": {
-    "uploader": "^3.25.0"
+    "uploader": "^3.26.0"
   },
   "devDependencies": {
     "@babel/cli": "7.17.6",
