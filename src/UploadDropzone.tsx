@@ -27,26 +27,25 @@ export const UploadDropzone = ({
   const [element, elementRef] = useElementRef();
   const classNameProp = className === undefined ? {} : { className };
   const onUpdateParams: UploadWidgetConfig = onUpdate === undefined ? {} : { onUpdate };
-  const autoUpdatingOptions = useAutoUpdatingOptions({ ...options, ...onUpdateParams });
+  const autoUpdatingOptions = useAutoUpdatingOptions({
+    ...options,
+    ...onUpdateParams,
+    layout: "inline",
+    container: element
+  });
 
   // Prevent React warning, while keeping rendering synchronous in the browser.
   if (typeof window !== "undefined") {
     useLayoutEffect(() => {
       if (element !== undefined) {
-        uploader
-          .open({
-            ...autoUpdatingOptions,
-            container: element,
-            layout: "inline"
-          })
-          .then(
-            files => {
-              if (onComplete !== undefined) {
-                onComplete(files);
-              }
-            },
-            error => console.error("Uploader error.", error)
-          );
+        uploader.open(autoUpdatingOptions).then(
+          files => {
+            if (onComplete !== undefined) {
+              onComplete(files);
+            }
+          },
+          error => console.error("Uploader error.", error)
+        );
       }
     }, [element]);
   }
