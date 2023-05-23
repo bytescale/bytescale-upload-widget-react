@@ -74,6 +74,7 @@
     "react": ">=16.3.0"
   },
   "dependencies": {
+    "lodash.isequal": "^4.5.0",
     "uploader": "^3.35.0"
   },
   "devDependencies": {
@@ -84,6 +85,7 @@
     "@types/enzyme": "3.10.11",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "27.4.1",
+    "@types/lodash.isequal": "4.5.5",
     "@types/react": "16.9.56",
     "@types/react-dom": "16.9.9",
     "@typescript-eslint/eslint-plugin": "4.8.1",

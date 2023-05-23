@@ -1,3 +1,4 @@
+const error = global.console.error;
 global.console = {
   log: () => undefined, // console.log are ignored in tests
 
@@ -7,7 +8,7 @@ global.console = {
       // Silence React "render in body" warning.
       return;
     }
-    console.error(e);
+    error(e);
   },
   warn: console.warn,
   info: console.info,

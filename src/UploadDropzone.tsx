@@ -1,6 +1,7 @@
 import { UploaderInterface, UploadWidgetResult, UploadWidgetConfig } from "uploader";
 import React, { useLayoutEffect } from "react";
-import { useElementRef } from "./Utils";
+import { useElementRef } from "./hooks/UseElementRef";
+import { useAutoUpdatingOptions } from "react-uploader/hooks/UseAutoUpdatingOptions";
 
 interface Props {
   className?: string;
@@ -25,17 +26,16 @@ export const UploadDropzone = ({
 }: Props): JSX.Element => {
   const [element, elementRef] = useElementRef();
   const classNameProp = className === undefined ? {} : { className };
+  const onUpdateParams: UploadWidgetConfig = onUpdate === undefined ? {} : { onUpdate };
+  const autoUpdatingOptions = useAutoUpdatingOptions({ ...options, ...onUpdateParams });
 
   // Prevent React warning, while keeping rendering synchronous in the browser.
   if (typeof window !== "undefined") {
     useLayoutEffect(() => {
       if (element !== undefined) {
-        const onUpdateParams: UploadWidgetConfig = onUpdate === undefined ? {} : { onUpdate };
-
         uploader
           .open({
-            ...options,
-            ...onUpdateParams,
+            ...autoUpdatingOptions,
             container: element,
             layout: "inline"
           })
