@@ -126,7 +126,7 @@ The `UploadDropzone` component renders an inline drag-and-drop file upload dropz
 
 ```javascript
 import { Uploader } from "uploader"; // Installed by "react-uploader".
-import { UploadButton } from "react-uploader";
+import { UploadDropzone } from "react-uploader";
 
 // Initialize once (at the start of your app).
 const uploader = Uploader({
