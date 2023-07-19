@@ -75,7 +75,7 @@
   },
   "dependencies": {
     "lodash.isequal": "^4.5.0",
-    "uploader": "^3.37.0"
+    "uploader": "^3.38.0"
   },
   "devDependencies": {
     "@babel/cli": "7.17.6",
