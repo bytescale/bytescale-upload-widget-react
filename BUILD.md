@@ -1,6 +1,6 @@
 # Building From Source
 
-This repository contains a hot-reloading sandbox for developing the `@upload-io/react-uploader` NPM package.
+This repository contains a hot-reloading sandbox for developing the `react-uploader` NPM package.
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ This repository contains a hot-reloading sandbox for developing the `@upload-io/
 ### 1. Clone
 
 ```shell
-git clone git@github.com:upload-io/react-uploader.git
+git clone git@github.com:bytescale/react-uploader.git
 cd react-uploader
 ```
 

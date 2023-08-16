@@ -1,12 +1,12 @@
 <h1 align="center">
-  <a href="https://upload.io/uploader">
-    <img alt="React Uploader" width="264" height="106" src="https://raw.githubusercontent.com/upload-io/react-uploader/main/.github/assets/logo.svg">
+  <a href="https://www.bytescale.com/docs/upload-widget/frameworks/react">
+    <img alt="React Uploader" width="264" height="106" src="https://raw.githubusercontent.com/bytescale/react-uploader/main/.github/assets/logo.svg">
   </a>
 </h1>
 <p align="center"><b>React File Upload Widget</b><br/> (With Integrated Cloud Storage)</p>
 <br/>
 <p align="center">
-  <a href="https://github.com/upload-io/react-uploader/">
+  <a href="https://github.com/bytescale/react-uploader/">
     <img src="https://img.shields.io/badge/gzipped-33%20kb-4ba0f6" />
   </a>
 
@@ -14,7 +14,7 @@
     <img src="https://img.shields.io/badge/react--uploader-npm-4ba0f6" />
   </a>
 
-  <a href="https://github.com/upload-io/react-uploader/actions/workflows/ci.yml">
+  <a href="https://github.com/bytescale/react-uploader/actions/workflows/ci.yml">
     <img src="https://img.shields.io/badge/build-passing-4ba0f6" />
   </a>
 
@@ -27,7 +27,7 @@
     <img src="https://img.shields.io/badge/TypeScript-included-4ba0f6" />
   </a>
 
-  <a href="https://github.com/upload-io/react-uploader/actions/workflows/ci.yml">
+  <a href="https://github.com/bytescale/react-uploader/actions/workflows/ci.yml">
     <img src="https://img.shields.io/npms-io/maintenance-score/react-uploader?color=4ba0f6" />
   </a>
 
@@ -43,13 +43,13 @@
   </a>
 </h1>
 
-<p align="center"><a href="https://upload.io/uploader"><img alt="Upload Widget Demo" width="100%" src="https://raw.githubusercontent.com/upload-io/react-uploader/main/.github/assets/demo.webp"></a></p>
+<p align="center"><a href="https://www.bytescale.com/docs/upload-widget/frameworks/react"><img alt="Upload Widget Demo" width="100%" src="https://raw.githubusercontent.com/bytescale/react-uploader/main/.github/assets/demo.webp"></a></p>
 
-<p align="center">100% Serverless File Upload Widget  <br /> Powered by <a href="https://upload.io/">Upload.io</a><br/><br/></p>
+<p align="center">100% Serverless File Upload Widget  <br /> Powered by <a href="https://www.bytescale.com/">Bytescale</a><br/><br/></p>
 
 <hr/>
 
-<p align="center"><a href="https://upload.io/dmca" rel="nofollow">DMCA Compliant</a> • <a href="https://upload.io/dpa" rel="nofollow">GDPR Compliant</a> • <a href="https://upload.io/sla" rel="nofollow">99.9% Uptime SLA</a>
+<p align="center"><a href="https://www.bytescale.com/dmca" rel="nofollow">DMCA Compliant</a> • <a href="https://www.bytescale.com/dpa" rel="nofollow">GDPR Compliant</a> • <a href="https://www.bytescale.com/sla" rel="nofollow">99.9% Uptime SLA</a>
   <br/>
   <b>Supports:</b> Rate Limiting, Volume Limiting, File Size &amp; Type Limiting, JWT Auth, and more...
   <br />
@@ -76,7 +76,7 @@ yarn add react-uploader
 Or via a `<script>` tag:
 
 ```html
-<script src="https://js.upload.io/react-uploader/v3"></script>
+<script src="https://js.bytescale.com/react-uploader/v3"></script>
 ```
 
 # Usage
@@ -93,10 +93,10 @@ import { UploadButton } from "react-uploader";
 
 // Initialize once (at the start of your app).
 const uploader = Uploader({
-  apiKey: "free" // Get production API keys from Upload.io
+  apiKey: "free" // Get production API keys from Bytescale
 });
 
-// Configuration options: https://upload.io/uploader#customize
+// Configuration options: https://www.bytescale.com/docs/upload-widget/frameworks/react#customize
 const options = { multi: true };
 
 const MyApp = () => (
@@ -130,10 +130,10 @@ import { UploadDropzone } from "react-uploader";
 
 // Initialize once (at the start of your app).
 const uploader = Uploader({
-  apiKey: "free" // Get production API keys from Upload.io
+  apiKey: "free" // Get production API keys from Bytescale
 });
 
-// Configuration options: https://upload.io/uploader#customize
+// Configuration options: https://www.bytescale.com/docs/upload-widget/frameworks/react#customize
 const options = { multi: true };
 
 const MyApp = () => (
@@ -168,7 +168,7 @@ The callbacks receive a `Array<UploadWidgetResult>`:
   originalFile: {
     fileUrl: "https://upcdn.io/FW25...", // Uploaded file URL.
     filePath: "/uploads/example.jpg",    // Uploaded file path (relative to your raw file directory).
-    accountId: "FW251aX",                // Upload.io account the file was uploaded to.
+    accountId: "FW251aX",                // Bytescale account the file was uploaded to.
     originalFileName: "example.jpg",     // Original file name from the user's machine.
     file: { ... },                       // Original DOM file object from the <input> element.
     size: 12345,                         // File size in bytes.
@@ -190,7 +190,7 @@ The callbacks receive a `Array<UploadWidgetResult>`:
 
 ## 🌐 File Management API
 
-Upload.io provides an [Upload API](https://upload.io/docs/upload-api), which supports the following:
+Bytescale provides an [Upload API](https://www.bytescale.com/docs/upload-api), which supports the following:
 
 - File uploading.
 - File listing.
@@ -202,26 +202,26 @@ Uploading a `"Hello World"` text file is as simple as:
 ```shell
 curl --data "Hello World" \
      -u apikey:free \
-     -X POST "https://api.upload.io/v1/files/basic"
+     -X POST "https://api.bytescale.com/v1/files/basic"
 ```
 
 _Note: Remember to set `-H "Content-Type: mime/type"` when uploading other file types!_
 
-[Read the Upload API docs »](https://upload.io/docs/upload-api)
+[Read the Upload API docs »](https://www.bytescale.com/docs/upload-api)
 
 ## 🌐 Image Processing API (Resize, Crop, etc.)
 
-Upload.io also provides an [Image Processing API](https://upload.io/docs/image-processing-api), which supports the following:
+Bytescale also provides an [Image Processing API](https://www.bytescale.com/docs/image-processing-api), which supports the following:
 
-- [Image Resizing](https://upload.io/docs/image-processing-api#image-resizing-api)
-- [Image Cropping](https://upload.io/docs/image-processing-api#image-cropping-api)
-- [Image Compression](https://upload.io/docs/image-processing-api#image-compression-api)
-- [Image Conversion](https://upload.io/docs/image-processing-api#f)
-- [Image Manipulation (blur, sharpen, brightness, etc.)](https://upload.io/docs/image-processing-api#image-manipulation-api)
-- [Layering (e.g for text & image watermarks)](https://upload.io/docs/image-processing-api#image)
+- [Image Resizing](https://www.bytescale.com/docs/image-processing-api#image-resizing-api)
+- [Image Cropping](https://www.bytescale.com/docs/image-processing-api#image-cropping-api)
+- [Image Compression](https://www.bytescale.com/docs/image-processing-api#image-compression-api)
+- [Image Conversion](https://www.bytescale.com/docs/image-processing-api#f)
+- [Image Manipulation (blur, sharpen, brightness, etc.)](https://www.bytescale.com/docs/image-processing-api#image-manipulation-api)
+- [Layering (e.g for text & image watermarks)](https://www.bytescale.com/docs/image-processing-api#image)
 - and more...
 
-[Read the Image Processing API docs »](https://upload.io/docs/image-processing-api)
+[Read the Image Processing API docs »](https://www.bytescale.com/docs/image-processing-api)
 
 ### Original Image
 
@@ -235,7 +235,7 @@ https://upcdn.io/W142hJk/raw/example/city-landscape.jpg
 
 ### Processed Image
 
-Using the [Image Processing API](https://upload.io/docs/image-processing-api), you can produce [this image](https://upcdn.io/W142hJk/image/example/city-landscape.jpg?w=900&h=600&fit=crop&f=webp&q=80&blur=4&text=WATERMARK&layer-opacity=80&blend=overlay&layer-rotate=315&font-size=100&padding=10&font-weight=900&color=ffffff&repeat=true&text=Chicago&gravity=bottom&padding-x=50&padding-bottom=20&font=/example/fonts/Lobster.ttf&color=ffe400):
+Using the [Image Processing API](https://www.bytescale.com/docs/image-processing-api), you can produce [this image](https://upcdn.io/W142hJk/image/example/city-landscape.jpg?w=900&h=600&fit=crop&f=webp&q=80&blur=4&text=WATERMARK&layer-opacity=80&blend=overlay&layer-rotate=315&font-size=100&padding=10&font-weight=900&color=ffffff&repeat=true&text=Chicago&gravity=bottom&padding-x=50&padding-bottom=20&font=/example/fonts/Lobster.ttf&color=ffe400):
 
 <img src="https://upcdn.io/W142hJk/image/example/city-landscape.jpg?w=900&h=600&fit=crop&f=webp&q=80&blur=4&text=WATERMARK&layer-opacity=80&blend=overlay&layer-rotate=315&font-size=100&padding=10&font-weight=900&color=ffffff&repeat=true&text=Chicago&gravity=bottom&padding-x=50&padding-bottom=20&font=/example/fonts/Lobster.ttf&color=ffe400" />
 
@@ -266,25 +266,25 @@ https://upcdn.io/W142hJk/image/example/city-landscape.jpg
 
 ## Full Documentation
 
-[Uploader Documentation »](https://upload.io/docs/upload-widget)
+[Uploader Documentation »](https://www.bytescale.com/docs/upload-widget)
 
 ## Need a Headless (no UI) File Upload Library?
 
-[Try Upload.js »](https://upload.io/upload-js)
+[Try Upload.js »](https://www.bytescale.com/upload-js)
 
 ## Can I use my own storage?
 
-**Yes:** Upload.io supports AWS S3 on [Upload Plus](https://upload.io/pricing) plans.
+**Yes:** Bytescale supports AWS S3, Cloudflare R2, Google Storage, and DigitalOcean Spaces.
 
-Upload.io offers its own built-in storage for ease and simplicity (default).
+To configure a custom storage backend, please see:
 
-You can change this to AWS S3 on a folder-by-folder basis in the Upload Dashboard.
+[https://www.bytescale.com/docs/storage/sources](https://www.bytescale.com/docs/storage/sources)
 
-## 👋 Create your Upload.io Account
+## 👋 Create your Bytescale Account
 
-React Uploader is the React file upload component for Upload.io — The File Upload Service for Web Apps:
+React Uploader is the React Upload Widget for Bytescale: the best way to serve images, videos, and audio for web apps.
 
-**[Create an Upload.io account »](https://upload.io/upload-js/get-started)**
+**[Create a Bytescale account »](https://www.bytescale.com/)**
 
 ## Building From Source
 
