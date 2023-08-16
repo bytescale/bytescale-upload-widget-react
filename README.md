@@ -38,7 +38,7 @@
 </p>
 <h1 align="center">
   Get Started —
-  <a href="https://codepen.io/upload-js/pen/popWJpX?editors=0010">
+  <a href="https://codepen.io/bytescale/pen/popWJpX?editors=0010">
     Try on CodePen
   </a>
 </h1>
@@ -81,7 +81,7 @@ Or via a `<script>` tag:
 
 # Usage
 
-## UploadButton — [Try on CodePen](https://codepen.io/upload-js/pen/popWJpX?editors=0010)
+## UploadButton — [Try on CodePen](https://codepen.io/bytescale/pen/popWJpX?editors=0010)
 
 The `UploadButton` component uses a [render prop](https://reactjs.org/docs/render-props.html) to provide an `onClick` callback to your button element.
 
@@ -120,7 +120,7 @@ Optional props:
 - `options`
 - `onComplete`
 
-## UploadDropzone — [Try on CodePen](https://codepen.io/upload-js/pen/LYrMzaB?editors=0010)
+## UploadDropzone — [Try on CodePen](https://codepen.io/bytescale/pen/LYrMzaB?editors=0010)
 
 The `UploadDropzone` component renders an inline drag-and-drop file upload dropzone:
 
