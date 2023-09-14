@@ -51,7 +51,7 @@ jobs:
         env:
           SLACK_CHANNEL: deployments
           SLACK_COLOR: "#17BB5E"
-          SLACK_TITLE: "Built: react-uploader :rocket:"
+          SLACK_TITLE: "Built: @bytescale/upload-widget-react :rocket:"
           SLACK_FOOTER: "This package was successfully built."
           MSG_MINIMAL: true
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
@@ -62,7 +62,7 @@ jobs:
         env:
           SLACK_CHANNEL: deployments
           SLACK_COLOR: "#BB1717"
-          SLACK_TITLE: "Failed: react-uploader :boom:"
+          SLACK_TITLE: "Failed: @bytescale/upload-widget-react :boom:"
           SLACK_FOOTER: "No packages published."
           MSG_MINIMAL: true
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

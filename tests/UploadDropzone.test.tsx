@@ -1,7 +1,7 @@
 import React from "react";
 import { configure, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import { UploadDropzone } from "react-uploader/UploadDropzone";
+import { UploadDropzone } from "@bytescale/upload-widget-react/UploadDropzone";
 import { act } from "react-dom/test-utils";
 
 (global as any).ResizeObserver = require("resize-observer-polyfill");

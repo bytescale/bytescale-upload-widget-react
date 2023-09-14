@@ -19,8 +19,8 @@
     "baseUrl": "./src",
     "jsx": "react",
     "paths": {
-      "react-uploader": ["./"],
-      "react-uploader/*": ["./*"]
+      "@bytescale/upload-widget-react": ["./"],
+      "@bytescale/upload-widget-react/*": ["./*"]
     }
   },
   "include": ["./**/*"],

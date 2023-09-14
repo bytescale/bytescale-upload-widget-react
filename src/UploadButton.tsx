@@ -1,4 +1,4 @@
-import { useAutoUpdatingOptions } from "react-uploader/hooks/UseAutoUpdatingOptions";
+import { useAutoUpdatingOptions } from "@bytescale/upload-widget-react/hooks/UseAutoUpdatingOptions";
 import { UploadWidget, UploadWidgetConfig, UploadWidgetResult } from "@bytescale/upload-widget";
 
 interface MouseEventLite {

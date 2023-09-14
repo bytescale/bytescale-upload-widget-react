@@ -27,7 +27,7 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
     alias: {
       // Remember to keep in sync with `tsconfig.json`
-      "react-uploader": path.resolve(__dirname, "src")
+      "@bytescale/upload-widget-react": path.resolve(__dirname, "src")
     }
   },
   externals: nodeExternals(),

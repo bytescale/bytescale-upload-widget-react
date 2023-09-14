@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import { useElementRef } from "./hooks/UseElementRef";
-import { useAutoUpdatingOptions } from "react-uploader/hooks/UseAutoUpdatingOptions";
+import { useAutoUpdatingOptions } from "@bytescale/upload-widget-react/hooks/UseAutoUpdatingOptions";
 import { UploadWidget, UploadWidgetConfig, UploadWidgetResult } from "@bytescale/upload-widget";
 
 interface Props {

@@ -1,2 +1,2 @@
-export { UploadButton } from "react-uploader/UploadButton";
-export { UploadDropzone } from "react-uploader/UploadDropzone";
+export { UploadButton } from "@bytescale/upload-widget-react/UploadButton";
+export { UploadDropzone } from "@bytescale/upload-widget-react/UploadDropzone";

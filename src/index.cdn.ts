@@ -3,4 +3,4 @@
 // we make the packages available on 'global'.
 export * from "@bytescale/sdk";
 export * from "@bytescale/upload-widget";
-export * from "react-uploader";
+export * from "@bytescale/upload-widget-react";

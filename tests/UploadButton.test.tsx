@@ -1,4 +1,4 @@
-import { UploadButton } from "react-uploader/UploadButton";
+import { UploadButton } from "@bytescale/upload-widget-react/UploadButton";
 import React from "react";
 import { configure, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";

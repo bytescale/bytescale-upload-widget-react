@@ -1,4 +1,4 @@
-import { useObjectDep } from "react-uploader/hooks/UseObjectDep";
+import { useObjectDep } from "@bytescale/upload-widget-react/hooks/UseObjectDep";
 import { useEffect, useState } from "react";
 import { UploadWidgetConfig, UploadWidgetMethods } from "@bytescale/upload-widget";
 

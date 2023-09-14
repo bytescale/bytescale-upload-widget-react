@@ -1,6 +1,6 @@
 # Building From Source
 
-This repository contains a hot-reloading sandbox for developing the `react-uploader` NPM package.
+This repository contains a hot-reloading sandbox for developing the `@bytescale/upload-widget-react` NPM package.
 
 ## Prerequisites
 
@@ -16,8 +16,8 @@ This repository contains a hot-reloading sandbox for developing the `react-uploa
 ### 1. Clone
 
 ```shell
-git clone git@github.com:bytescale/react-uploader.git
-cd react-uploader
+git clone git@github.com:bytescale/upload-widget-react.git
+cd upload-widget-react
 ```
 
 ### 2. Setup Environment
@@ -38,4 +38,4 @@ npm install
 npm test
 ```
 
-Note: there is no hot-reloading demo for `react-uploader`. Please see the `uploader` repository instead.
+Note: there is no hot-reloading demo for `@bytescale/upload-widget-react`. Please see the `@bytescale/upload-widget` repository instead.
