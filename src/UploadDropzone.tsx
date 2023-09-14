@@ -1,7 +1,7 @@
-import { UploaderInterface, UploadWidgetResult, UploadWidgetConfig } from "uploader";
 import React, { useLayoutEffect } from "react";
 import { useElementRef } from "./hooks/UseElementRef";
 import { useAutoUpdatingOptions } from "react-uploader/hooks/UseAutoUpdatingOptions";
+import { UploadWidget, UploadWidgetConfig, UploadWidgetResult } from "@bytescale/upload-widget";
 
 interface Props {
   className?: string;
@@ -9,13 +9,11 @@ interface Props {
   minWidth?: string;
   onComplete?: (files: UploadWidgetResult[]) => void;
   onUpdate?: (files: UploadWidgetResult[]) => void;
-  options?: UploadWidgetConfig;
-  uploader: UploaderInterface;
+  options: UploadWidgetConfig;
   width?: string;
 }
 
 export const UploadDropzone = ({
-  uploader,
   options,
   onComplete,
   onUpdate,
@@ -26,7 +24,7 @@ export const UploadDropzone = ({
 }: Props): JSX.Element => {
   const [element, elementRef] = useElementRef();
   const classNameProp = className === undefined ? {} : { className };
-  const onUpdateParams: UploadWidgetConfig = onUpdate === undefined ? {} : { onUpdate };
+  const onUpdateParams: Partial<UploadWidgetConfig> = onUpdate === undefined ? {} : { onUpdate };
   const autoUpdatingOptions = useAutoUpdatingOptions({
     ...options,
     ...onUpdateParams,
@@ -38,7 +36,7 @@ export const UploadDropzone = ({
   if (typeof window !== "undefined") {
     useLayoutEffect(() => {
       if (element !== undefined) {
-        uploader.open(autoUpdatingOptions).then(
+        UploadWidget.open(autoUpdatingOptions).then(
           files => {
             if (onComplete !== undefined) {
               onComplete(files);

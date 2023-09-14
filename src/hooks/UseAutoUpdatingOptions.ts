@@ -1,23 +1,22 @@
-import { UploadWidgetConfig } from "uploader";
 import { useObjectDep } from "react-uploader/hooks/UseObjectDep";
 import { useEffect, useState } from "react";
-import { UploadWidgetMethods } from "uploader/dist/config/UploadWidgetMethods";
+import { UploadWidgetConfig, UploadWidgetMethods } from "@bytescale/upload-widget";
 
-export function useAutoUpdatingOptions(optionsMaybe: UploadWidgetConfig | undefined): UploadWidgetConfig {
+export function useAutoUpdatingOptions(options: UploadWidgetConfig): UploadWidgetConfig {
   const [methods, setMethods] = useState<UploadWidgetMethods | undefined>(undefined);
-  const optionsDep = useObjectDep(optionsMaybe ?? {});
+  const optionsDep = useObjectDep(options);
 
   useEffect(() => {
     if (methods !== undefined) {
-      methods.updateConfig(optionsMaybe ?? {});
+      methods.updateConfig(options);
     }
   }, [optionsDep, methods]);
 
   return {
-    ...optionsMaybe,
+    ...options,
     onInit: m => {
-      if (optionsMaybe?.onInit !== undefined) {
-        optionsMaybe.onInit(m);
+      if (options?.onInit !== undefined) {
+        options.onInit(m);
       }
       setMethods(m);
     }

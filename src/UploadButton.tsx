@@ -1,5 +1,5 @@
-import { UploaderInterface, UploadWidgetResult, UploadWidgetConfig } from "uploader";
 import { useAutoUpdatingOptions } from "react-uploader/hooks/UseAutoUpdatingOptions";
+import { UploadWidget, UploadWidgetConfig, UploadWidgetResult } from "@bytescale/upload-widget";
 
 interface MouseEventLite {
   preventDefault: () => void;
@@ -8,17 +8,16 @@ interface MouseEventLite {
 interface Props {
   children: (props: { onClick: (event: MouseEventLite) => void }) => JSX.Element;
   onComplete?: (files: UploadWidgetResult[]) => void;
-  options?: UploadWidgetConfig;
-  uploader: UploaderInterface;
+  options: UploadWidgetConfig;
 }
 
-export const UploadButton = ({ uploader, options, onComplete, children }: Props): JSX.Element => {
+export const UploadButton = ({ options, onComplete, children }: Props): JSX.Element => {
   const autoUpdatingOptions = useAutoUpdatingOptions(options);
 
   const onClick = (e: MouseEventLite): void => {
     e.preventDefault();
 
-    uploader.open(autoUpdatingOptions).then(
+    UploadWidget.open(autoUpdatingOptions).then(
       files => {
         if (onComplete !== undefined) {
           onComplete(files);

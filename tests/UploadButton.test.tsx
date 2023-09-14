@@ -1,19 +1,19 @@
 import { UploadButton } from "react-uploader/UploadButton";
 import React from "react";
-import { Uploader } from "uploader";
 import { configure, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { act } from "react-dom/test-utils";
 
 (global as any).ResizeObserver = require("resize-observer-polyfill");
-const uploader = Uploader({ apiKey: "free" });
 configure({ adapter: new Adapter() });
 
 describe("UploadButton Component", () => {
   test("Renders the given child", () => {
     act(() => {
       const html = mount(
-        <UploadButton uploader={uploader}>{({ onClick }) => <button onClick={onClick}>Click Me</button>}</UploadButton>
+        <UploadButton options={{ apiKey: "free" }}>
+          {({ onClick }) => <button onClick={onClick}>Click Me</button>}
+        </UploadButton>
       );
       expect(html.text()).toEqual("Click Me");
     });
@@ -23,7 +23,7 @@ describe("UploadButton Component", () => {
     await act(async () => {
       const html = mount(
         <div>
-          <UploadButton uploader={uploader} options={{ container: "#container" }}>
+          <UploadButton options={{ apiKey: "free", container: "#container" }}>
             {({ onClick }) => <button onClick={onClick}>Click Me</button>}
           </UploadButton>
           <div id="container" />
