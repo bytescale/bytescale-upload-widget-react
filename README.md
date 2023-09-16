@@ -3,11 +3,11 @@
     <img alt="Bytescale Upload Widget (React)" width="541" height="67" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-react/main/.github/assets/bytescale-upload-widget-react.svg">
   </a>
 </h1>
-<p align="center"><b>Beautiful File Upload Widget for React Apps</b><br/> (With Built-in Cloud Storage)</p>
+<p align="center"><b>Beautiful File Upload Widget for React</b><br/> (With Built-in Cloud Storage)</p>
 <br/>
 <p align="center">
   <a href="https://www.npmjs.com/package/@bytescale/upload-widget-react">
-    <img src="https://img.shields.io/badge/%40bytescale%2Fupload--widget-npm-4ba0f6" />
+    <img src="https://img.shields.io/badge/%40bytescale%2Fupload--widget--react-npm-4ba0f6" />
   </a>
 
   <a href="https://github.com/bytescale/bytescale-upload-widget-react/actions/workflows/ci.yml">
@@ -54,7 +54,7 @@
   <b>Supports:</b> Image Cropping, Video Previews, Document Previews, Drag & Drop, Multiple Files & More...
   <br />
   <br />
-  <a href="https://www.bytescale.com/docs/upload-widget" rel="nofollow"><b>Full Documentation</b></a> • <a href="https://www.bytescale.com/docs/sdks/javascript" rel="nofollow">Headless SDK</a> • <a href="https://www.bytescale.com/docs/media-processing-apis" rel="nofollow">Media Processing APIs</a> • <a href="https://www.bytescale.com/docs/storage/sources" rel="nofollow">Storage</a> • <a href="https://www.bytescale.com/docs/cdn" rel="nofollow">CDN</a>
+  <a href="https://www.bytescale.com/docs/upload-widget/react" rel="nofollow"><b>Full Documentation</b></a> • <a href="https://www.bytescale.com/docs/sdks/javascript" rel="nofollow">Headless SDK</a> • <a href="https://www.bytescale.com/docs/media-processing-apis" rel="nofollow">Media Processing APIs</a> • <a href="https://www.bytescale.com/docs/storage/sources" rel="nofollow">Storage</a> • <a href="https://www.bytescale.com/docs/cdn" rel="nofollow">CDN</a>
 </p>
 
 <hr/>
@@ -86,28 +86,72 @@ Or via a `<script>` tag:
 
 ### UploadButton — [Try on CodePen](https://codepen.io/bytescale/pen/popWJpX?editors=0010)
 
-```html
-import { UploadButton } from "react-uploader";
+The `UploadButton` component uses a [render prop](https://reactjs.org/docs/render-props.html) to provide an `onClick` callback to your button element.
 
-// Initialize once (at the start of your app).
-const uploader = Uploader({ apiKey: "free" }); // Replace "free" with your API key.
+When clicked, a file upload modal will appear:
+
+```javascript
+import { UploadButton } from "@bytescale/upload-widget-react";
+
+// Full Configuration:
+// https://www.bytescale.com/docs/upload-widget#configuration
+const options = {
+  apiKey: "free", // Get API key: https://www.bytescale.com/get-started
+  maxFileCount: 10
+};
 
 const MyApp = () => (
-<UploadButton uploader={uploader}
-              options={{ multi: true }}
-              onComplete={files => alert(files.map(x => x.fileUrl).join("\n"))}>
-{({onClick}) =>
-<button onClick={onClick}>
-  Upload a file...
-</button>
-}
-</UploadButton>
-)
+  <UploadButton options={options}
+                onComplete={files => alert(files.map(x => x.fileUrl).join("\n"))}>
+    {({onClick}) =>
+      <button onClick={onClick}>
+        Upload a file...
+      </button>
+    }
+  </UploadButton>
+);
 ```
 
-### Get the Result
+Required props:
+- `options`
+- `children`
 
-`.open()` returns `Promise<Array<UploaderResult>>`:
+Optional props:
+- `onComplete`
+
+### UploadDropzone — [Try on CodePen](https://codepen.io/bytescale/pen/LYrMzaB?editors=0010)
+
+The `UploadDropzone` component renders an inline drag-and-drop file upload dropzone:
+
+```javascript
+import { UploadButton } from "@bytescale/upload-widget-react";
+
+// Full Configuration:
+// https://www.bytescale.com/docs/upload-widget#configuration
+const options = {
+  apiKey: "free", // Get API key: https://www.bytescale.com/get-started
+  maxFileCount: 10
+};
+
+const MyApp = () => (
+  <UploadDropzone options={options}
+                  onUpdate={files => alert(files.map(x => x.fileUrl).join("\n"))}
+                  width="600px"
+                  height="375px" />
+);
+```
+
+Required props:
+- `options`
+
+Optional props:
+- `onUpdate`
+- `width`
+- `height`
+
+## Result
+
+The callbacks receive a `Array<UploadWidgetResult>`:
 
 ```javascript
 {
@@ -137,73 +181,12 @@ const MyApp = () => (
 }
 ```
 
-## 👀 More Examples
-
-### Creating a profile picker — [Try on CodePen](https://codepen.io/bytescale/pen/gOXEWWB?editors=1010):
-
-<p align="center"><a href="https://www.bytescale.com/docs/upload-widget"><img alt="Upload Widget Demo" width="100%" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-react/main/.github/assets/demo.webp"></a></p>
-
-```javascript
-Bytescale.UploadWidget.open({
-  apiKey: "free", // Get API keys from: www.bytescale.com
-  multi: false,   // Full Config: https://www.bytescale.com/docs/upload-widget#configuration
-  mimeTypes: ["image/*"],
-  editor: {
-    images: {
-      crop: true,
-      cropShape: "circ", // "rect" also supported.
-      cropRatio: 1 / 1   // "1" is enforced for "circ".
-    }
-  }
-})
-.then(files => alert(JSON.stringify(files)));
-```
-
-#### How does image cropping work?
-
-The image cropper uses server-side image cropping, and works like so:
-
-1. First, the original image is uploaded, with no cropping applied.
-1. If the user-provided crop geometry matches the original image geometry, then no further action is taken.
-  - The `filePath` in the result will reference the original image.
-1. Else a **2nd file is uploaded** containing JSON that describes the crop geometry and includes a reference to the original image's `filePath`.
-  - The `filePath` in the result will reference the JSON file.
-1. When a JSON file is requested via the [Image Processing API](https://www.bytescale.com/docs/image-processing-api), then the crop described by the JSON file will be applied first, followed by any additional transformations you have specified via the URL.
-
-### Uploading multiple files — [Try on CodePen](https://codepen.io/bytescale/pen/RwjdVxY?editors=1010):
-
-```javascript
-Bytescale.UploadWidget.open({
-  apiKey: "free", // Get API keys from: www.bytescale.com
-  multi: true     // Full Config: https://www.bytescale.com/docs/upload-widget#configuration
-}).then(files => alert(JSON.stringify(files)));
-```
-
-### Creating a Dropzone — [Try on CodePen](https://codepen.io/bytescale/pen/PoOLmeL?editors=1010):
-
-You can use UploadWidget as a dropzone — rather than a modal — by specifying `layout: "inline"` and a container:
-
-```javascript
-Bytescale.UploadWidget.open({
-  apiKey: "free",               // Get API keys from: www.bytescale.com
-  multi: true,                  // Full Config: https://www.bytescale.com/docs/upload-widget#configuration
-  layout: "inline",             // Specifies dropzone behaviour.
-  container: "#example_div_id", // Replace with the ID of an existing DOM element (to render the dropzone inside).
-  onUpdate: (files) => console.log(files)
-})
-```
-
-Note:
-
-- You must set `position: relative`, `width` and `height` on the container `div`.
-- The `Finish` button is hidden by default in this mode (override with `"showFinishButton": true`).
-
 ## ⚙️ Configuration
 
-All configuration is optional.
+All configuration is optional (except for the `apiKey` field, which is required).
 
 ```javascript
-Bytescale.UploadWidget.open({
+const options = {
   apiKey: "free",                 // Get API keys from: www.bytescale.com
   container: "body",              // "body" by default.
   layout: "modal",                // "modal" by default. "inline" also supported.
@@ -266,7 +249,7 @@ Bytescale.UploadWidget.open({
       cropShape: "rect"           // "rect" (default) or "circ".
     }
   },
-}).then(files => alert(files))
+}
 ```
 
 ### 🏳️ Localization
