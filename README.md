@@ -124,7 +124,7 @@ Optional props:
 The `UploadDropzone` component renders an inline drag-and-drop file upload dropzone:
 
 ```javascript
-import { UploadButton } from "@bytescale/upload-widget-react";
+import { UploadDropzone } from "@bytescale/upload-widget-react";
 
 // Full Configuration:
 // https://www.bytescale.com/docs/upload-widget#configuration
