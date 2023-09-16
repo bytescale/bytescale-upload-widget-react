@@ -67,7 +67,7 @@
       "bash -c \"tsc --noEmit\""
     ],
     "*.{js,jsx,ts,tsx,json,css,html,md,yaml,yml}": [
-      "prettier -c"
+      "prettier -w"
     ]
   },
   "peerDependencies": {
