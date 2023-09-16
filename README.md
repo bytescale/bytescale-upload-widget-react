@@ -359,7 +359,7 @@ Bytescale supports two types of authorization:
 
 ### API Keys
 
-The Bytescale Upload Widget uses the `apiKey` parameter to authenticate with the Bytescale API.
+The Bytescale Upload Widget uses the `apiKey` parameter to authenticate with the [Bytescale API](https://www.bytescale.com/docs/apis).
 
 With API key auth, the requester has access to the resources available to the API key:
 
