@@ -1,9 +1,9 @@
 <h1 align="center">
-  <a href="https://www.bytescale.com/docs/upload-widget">
-    <img alt="UploadWidget" width="541" height="67" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-react/main/.github/assets/bytescale-upload-widget-react.svg">
+  <a href="https://www.bytescale.com/docs/upload-widget/react">
+    <img alt="Bytescale Upload Widget (React)" width="541" height="67" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-react/main/.github/assets/bytescale-upload-widget-react.svg">
   </a>
 </h1>
-<p align="center"><b>Beautiful Upload Widget for React Apps</b><br/> (With Built-in Cloud Storage)</p>
+<p align="center"><b>Beautiful File Upload Widget for React Apps</b><br/> (With Built-in Cloud Storage)</p>
 <br/>
 <p align="center">
   <a href="https://www.npmjs.com/package/@bytescale/upload-widget-react">
