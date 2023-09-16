@@ -96,7 +96,7 @@ import { UploadButton } from "@bytescale/upload-widget-react";
 // Full Configuration:
 // https://www.bytescale.com/docs/upload-widget#configuration
 const options = {
-  apiKey: "free", // Get API key: https://www.bytescale.com/get-started
+  apiKey: "free", // Get API keys from: www.bytescale.com
   maxFileCount: 10
 };
 
@@ -129,7 +129,7 @@ import { UploadButton } from "@bytescale/upload-widget-react";
 // Full Configuration:
 // https://www.bytescale.com/docs/upload-widget#configuration
 const options = {
-  apiKey: "free", // Get API key: https://www.bytescale.com/get-started
+  apiKey: "free", // Get API keys from: www.bytescale.com
   maxFileCount: 10
 };
 
@@ -297,7 +297,7 @@ const myCustomLocale = {
 
 ## 🌐 File Management APIs
 
-Bytescale provides [File Management APIs](https://www.bytescale.com/docs/apis):
+Bytescale provides a wide range of [File Management APIs](https://www.bytescale.com/docs/apis):
 
 - **[File Listing](https://www.bytescale.com/docs/folder-api/ListFolder)**
 - **[File Deleting](https://www.bytescale.com/docs/file-api/DeleteFile)**
