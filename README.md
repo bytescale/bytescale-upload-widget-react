@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://www.bytescale.com/docs/upload-widget/react">
-    <img alt="Bytescale Upload Widget for React" width="540" height="80" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-react/main/.github/assets/bytescale-upload-widget-react.svg">
+    <img alt="Bytescale Upload Widget for React" width="539" height="80" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-react/main/.github/assets/bytescale-upload-widget-react.svg">
   </a>
 </h1>
 <p align="center"><b>Beautiful File Upload Widget for React</b><br/> (With Built-in Cloud Storage)</p>
