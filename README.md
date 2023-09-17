@@ -43,7 +43,7 @@
   </a>
 </h1>
 
-<p align="center"><a href="https://www.bytescale.com/docs/upload-widget"><img alt="Upload Widget Demo" width="100%" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget-react/main/.github/assets/demo.gif"></a></p>
+<p align="center"><a href="https://www.bytescale.com/docs/upload-widget"><img alt="Upload Widget Demo" width="100%" src="https://raw.githubusercontent.com/bytescale/bytescale-upload-widget/main/.github/assets/demo.gif"></a></p>
 
 <p align="center">100% Serverless File Upload Widget  <br /> Powered by <a href="https://www.bytescale.com/">Bytescale</a><br/><br/></p>
 
