@@ -60,7 +60,6 @@
 <hr/>
 
 <br />
-<br />
 
 ## Installation
 
