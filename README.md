@@ -157,6 +157,8 @@ The callbacks receive a `Array<UploadWidgetResult>`:
   fileUrl: "https://upcdn.io/FW25...",   // URL to use when serving this file.
   filePath: "/uploads/example.jpg",      // File path (we recommend saving this to your database).
 
+  accountId: "FW251aX",                  // Bytescale account the file was uploaded to.
+
   editedFile: undefined,                 // Edited file (for image crops). Same structure as below.
 
   originalFile: {
