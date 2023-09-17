@@ -38,7 +38,7 @@
 </p>
 <h1 align="center">
   Get Started —
-  <a href="https://codepen.io/bytescale/pen/QWOZWZR?editors=0010">
+  <a href="https://codepen.io/bytescale/pen/popWJpX?editors=0010">
     Try on CodePen
   </a>
 </h1>
