@@ -188,8 +188,6 @@ All configuration is optional (except for the `apiKey` field, which is required)
 ```javascript
 const options = {
   apiKey: "free",                 // Get API keys from: www.bytescale.com
-  container: "body",              // "body" by default.
-  layout: "modal",                // "modal" by default. "inline" also supported.
   locale: myCustomLocale,         // EN_US by default. (See "Localization" section below.)
   maxFileCount: 5,                // Unlimited by default (or 1 if multi: false).
   maxFileSizeBytes: 1024 ** 2,    // Unlimited by default.
