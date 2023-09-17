@@ -10,7 +10,6 @@ Steps:
 4. Replace `uploader` with `upload-widget` in all CSS class name overrides (if you have any).
 5. Remove `uploader` (from imports and props)
 6. Add `apiKey` as a field to the object passed to the `options` prop (add it if you don't have one).
-7. Replace `uploader` with `upload-widget` in all CSS class name overrides.
 
 ### Before
 
