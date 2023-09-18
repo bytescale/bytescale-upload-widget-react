@@ -62,13 +62,13 @@ const MyDropzoneComponent = () => (
     options={options} // Required.
     width="600px" // Optional.
     height="375px" // Optional.
-    onUpdate={files => {
+    onUpdate={({ uploadedFiles }) => {
       // Optional.
-      if (files.length === 0) {
+      if (uploadedFiles.length === 0) {
         console.log("No files selected.");
       } else {
         console.log("Files uploaded:");
-        console.log(files.map(f => f.fileUrl));
+        console.log(uploadedFiles.map(f => f.fileUrl));
       }
     }}
   />
