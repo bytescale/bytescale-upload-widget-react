@@ -8,8 +8,9 @@ Steps:
 2. Uninstall `react-uploader` and `uploader`
 3. Replace `"react-uploader"` with `"@bytescale/upload-widget-react"` in your `import` statements.
 4. Replace `uploader` with `upload-widget` in all CSS class name overrides (if you have any).
-5. Remove `uploader` (from imports and props)
-6. Add `apiKey` as a field to the object passed to the `options` prop (add it if you don't have one).
+5. Replace `onUpdate: (files) => {}` with `onUpdate: ({uploadedFiles}) => {}`.
+6. Remove `uploader` (from imports and props)
+7. Add `apiKey` as a field to the object passed to the `options` prop (add it if you don't have one).
 
 ### Before
 

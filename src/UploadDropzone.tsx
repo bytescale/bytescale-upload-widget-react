@@ -2,13 +2,14 @@ import React, { useLayoutEffect } from "react";
 import { useElementRef } from "./hooks/UseElementRef";
 import { useAutoUpdatingOptions } from "@bytescale/upload-widget-react/hooks/UseAutoUpdatingOptions";
 import { UploadWidget, UploadWidgetConfig, UploadWidgetResult } from "@bytescale/upload-widget";
+import { UploadWidgetOnUpdateEvent } from "@bytescale/upload-widget/dist/config/UploadWidgetOnUpdateEvent";
 
 interface Props {
   className?: string;
   height?: string;
   minWidth?: string;
   onComplete?: (files: UploadWidgetResult[]) => void;
-  onUpdate?: (files: UploadWidgetResult[]) => void;
+  onUpdate?: (event: UploadWidgetOnUpdateEvent) => void;
   options: UploadWidgetConfig;
   width?: string;
 }
