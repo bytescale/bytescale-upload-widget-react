@@ -199,7 +199,10 @@ const options = {
     reset,                        // Resets the widget when called.
     updateConfig                  // Updates the widget's config by passing a new config
   }) => {},                       // object to the method's first parameter.
-  onUpdate: files => {},          // Called each time the list of uploaded files change.
+  onUpdate: (event) => {          // Called each time the Upload Widget's list of files change.
+    // event.pendingFiles         // Array of files that are either uploading or queued.
+    // event.uploadedFiles        // Array of files that have been uploaded and not removed.
+  },
   onPreUpload: async file => ({
     errorMessage: "Uh oh!",       // Displays this validation error to the user (if set).
     transformedFile: file         // Uploads 'transformedFile' instead of 'file' (if set).
