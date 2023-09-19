@@ -1,19 +1,19 @@
 {
   "name": "react-uploader",
-  "version": "3.41.0",
+  "version": "3.43.0",
   "author": "Bytescale <hello@bytescale.com> (https://www.bytescale.com)",
   "description": "React File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
   "main": "dist/main.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://www.bytescale.com/docs/upload-widget/frameworks/react",
+  "homepage": "https://www.bytescale.com/docs/upload-widget/react",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bytescale/react-uploader.git"
+    "url": "git+https://github.com/bytescale/bytescale-upload-widget-react.git"
   },
   "bugs": {
-    "url": "https://github.com/bytescale/react-uploader/issues"
+    "url": "https://github.com/bytescale/bytescale-upload-widget-react/issues"
   },
   "files": [
     "/dist/**/*",

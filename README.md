@@ -1,7 +1,5 @@
 <h1 align="center">
-  <a href="https://www.bytescale.com/docs/upload-widget/frameworks/react">
-    <img alt="React Uploader" width="264" height="106" src="https://raw.githubusercontent.com/bytescale/react-uploader/main/.github/assets/logo.svg">
-  </a>
+  Migrated to: <a href="https://www.npmjs.com/package/@bytescale/upload-widget-react">@bytescale/upload-widget-react</a>
 </h1>
 <p align="center"><b>React File Upload Widget</b><br/> (With Integrated Cloud Storage)</p>
 <br/>
