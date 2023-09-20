@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { UploadWidgetOnPreUploadResult } from "@bytescale/upload-widget";
 import { UploadButton, UploadDropzone } from "@bytescale/upload-widget-react";
-import { UploadWidgetOnPreUploadResult } from "@bytescale/upload-widget/dist/config/UploadWidgetOnPreUploadResult";
 
 /**
  * Playground for manual testing/experimentation of various edge cases. For example, checking how changes to the 'options'
