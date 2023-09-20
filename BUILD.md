@@ -32,10 +32,12 @@ export NODE_OPTIONS=--openssl-legacy-provider
 npm install
 ```
 
-### 4. Run The Tests
+### 4. Run The Sandbox
 
 ```shell
-npm test
+npm start
 ```
 
-Note: there is no hot-reloading demo for `@bytescale/upload-widget-react`. Please see the `@bytescale/upload-widget` repository instead.
+The above launches a **hot-reloading** server on `http://127.0.0.1:3060` that uses `@bytescale/upload-widget-react` from source.
+
+_Please ensure nothing else is running on TCP port `3060`_.

@@ -7,14 +7,17 @@ import {
   UploadWidgetResult,
   UploadWidgetOnUpdateEvent
 } from "@bytescale/upload-widget";
+import { UploadWidgetReactConfig } from "@bytescale/upload-widget-react/UploadWidgetReactConfig";
 
-interface Props {
+export type UploadDropzoneConfig = Omit<UploadWidgetReactConfig, "container">;
+
+export interface UploadDropzoneProps {
   className?: string;
   height?: string;
   minWidth?: string;
   onComplete?: (files: UploadWidgetResult[]) => void;
   onUpdate?: (event: UploadWidgetOnUpdateEvent) => void;
-  options: UploadWidgetConfig;
+  options: UploadDropzoneConfig;
   width?: string;
 }
 
@@ -26,7 +29,7 @@ export const UploadDropzone = ({
   width,
   height,
   className
-}: Props): JSX.Element => {
+}: UploadDropzoneProps): JSX.Element => {
   const [element, elementRef] = useElementRef();
   const classNameProp = className === undefined ? {} : { className };
   const onUpdateParams: Partial<UploadWidgetConfig> = onUpdate === undefined ? {} : { onUpdate };

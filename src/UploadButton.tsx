@@ -1,20 +1,30 @@
 import { useAutoUpdatingOptions } from "@bytescale/upload-widget-react/hooks/UseAutoUpdatingOptions";
-import { UploadWidget, UploadWidgetConfig, UploadWidgetResult } from "@bytescale/upload-widget";
+import {
+  UploadWidget,
+  UploadWidgetConfig,
+  UploadWidgetOnUpdateEvent,
+  UploadWidgetResult
+} from "@bytescale/upload-widget";
+import { UploadWidgetReactConfig } from "@bytescale/upload-widget-react/UploadWidgetReactConfig";
+import { BasicMouseEvent } from "@bytescale/upload-widget-react/BasicMouseEvent";
 
-interface MouseEventLite {
-  preventDefault: () => void;
-}
+export type UploadButtonConfig = UploadWidgetReactConfig;
 
-interface Props {
-  children: (props: { onClick: (event: MouseEventLite) => void }) => JSX.Element;
+export interface UploadButtonProps {
+  children: (props: { onClick: (event: BasicMouseEvent) => void }) => JSX.Element;
   onComplete?: (files: UploadWidgetResult[]) => void;
-  options: UploadWidgetConfig;
+  onUpdate?: (event: UploadWidgetOnUpdateEvent) => void;
+  options: UploadButtonConfig;
 }
 
-export const UploadButton = ({ options, onComplete, children }: Props): JSX.Element => {
-  const autoUpdatingOptions = useAutoUpdatingOptions(options);
+export const UploadButton = ({ options, onComplete, onUpdate, children }: UploadButtonProps): JSX.Element => {
+  const onUpdateParams: Partial<UploadWidgetConfig> = onUpdate === undefined ? {} : { onUpdate };
+  const autoUpdatingOptions = useAutoUpdatingOptions({
+    ...options,
+    ...onUpdateParams
+  });
 
-  const onClick = (e: MouseEventLite): void => {
+  const onClick = (e: BasicMouseEvent): void => {
     e.preventDefault();
 
     UploadWidget.open(autoUpdatingOptions).then(
