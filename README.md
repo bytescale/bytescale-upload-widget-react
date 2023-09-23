@@ -152,6 +152,7 @@ Required props:
 - `options`
 
 Optional props:
+- `onComplete`
 - `onUpdate`
 - `width`
 - `height`
