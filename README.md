@@ -148,6 +148,14 @@ Optional props:
 - `width`
 - `height`
 
+> **Special behaviour for dropzones:**
+>
+> `onComplete` only fires when `showFinishButton = true` (i.e. when the user clicks "Finish").
+>
+> `onUpdate` must be used when `showFinishButton = false`.
+>
+> Default value: `showFinishButton = false`
+
 ## Result
 
 The callbacks receive a `Array<UploadWidgetResult>`:
