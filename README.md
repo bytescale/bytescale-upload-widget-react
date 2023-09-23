@@ -140,14 +140,6 @@ const MyApp = () => (
 );
 ```
 
-Required props:
-- `options`
-
-Optional props:
-- `onUpdate`
-- `width`
-- `height`
-
 > **Special behaviour for dropzones:**
 >
 > `onComplete` only fires when `showFinishButton = true` (i.e. when the user clicks "Finish").
@@ -155,6 +147,14 @@ Optional props:
 > `onUpdate` must be used when `showFinishButton = false`.
 >
 > Default value: `showFinishButton = false`
+
+Required props:
+- `options`
+
+Optional props:
+- `onUpdate`
+- `width`
+- `height`
 
 ## Result
 
