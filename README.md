@@ -145,7 +145,9 @@ const MyApp = () => (
 >
 > `onComplete` only fires when `showFinishButton = true` (i.e. when the user clicks "Finish").
 >
-> `onUpdate` must be used when `showFinishButton = false` (default).
+> `onUpdate` must be used when `showFinishButton = false`.
+>
+> Default value: `showFinishButton = false`
 
 Required props:
 - `options`
