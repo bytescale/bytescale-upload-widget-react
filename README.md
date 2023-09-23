@@ -145,7 +145,7 @@ const MyApp = () => (
 
 > **Special behaviour for dropzones:**
 >
-> `onComplete` only fires when `showFinishButton = true` (i.e. when the user clicks "Finish").
+> `onComplete` only fires if `showFinishButton = true` (when the user clicks "Finish").
 >
 > `onUpdate` must be used when `showFinishButton = false`.
 >
