@@ -117,6 +117,7 @@ Required props:
 
 Optional props:
 - `onComplete`
+- `onUpdate`
 
 ### UploadDropzone — [Try on CodePen](https://codepen.io/bytescale/pen/LYrMzaB?editors=0010)
 
