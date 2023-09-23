@@ -135,7 +135,9 @@ const options = {
 
 const MyApp = () => (
   <UploadDropzone options={options}
-                  onUpdate={({ uploadedFiles }) => alert(uploadedFiles.map(x => x.fileUrl).join("\n"))}
+                  onUpdate={({ uploadedFiles }) => {
+                    console.log(uploadedFiles.map(x => x.fileUrl).join("\n"))
+                  }}
                   width="600px"
                   height="375px" />
 );
