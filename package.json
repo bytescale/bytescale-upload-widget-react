@@ -75,7 +75,7 @@
     "react": ">=16.3.0"
   },
   "dependencies": {
-    "@bytescale/upload-widget": "^4.14.0",
+    "@bytescale/upload-widget": "^4.16.0",
     "lodash.isequal": "^4.5.0"
   },
   "devDependencies": {
