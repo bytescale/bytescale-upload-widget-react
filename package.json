@@ -1,6 +1,6 @@
 {
   "name": "@bytescale/upload-widget-react",
-  "version": "4.14.0",
+  "version": "4.15.0",
   "author": "Bytescale <hello@bytescale.com> (https://www.bytescale.com)",
   "description": "React File Upload UI Widget — Lightweight & supports: drag and drop, multiple uploads, image cropping, customization & more 🚀 Comes with Cloud Storage 🌐",
   "license": "MIT",
