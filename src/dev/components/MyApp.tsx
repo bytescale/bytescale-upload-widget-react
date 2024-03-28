@@ -30,7 +30,8 @@ export default (): JSX.Element => {
 
       <UploadButton
         options={{ apiKey: "free", multi: true }}
-        onUpdate={x => setFiles(x.uploadedFiles.map(x => x.fileUrl))}>
+        onUpdate={x => setFiles(x.uploadedFiles.map(x => x.fileUrl))}
+      >
         {({ onClick }) => <button onClick={onClick}>Upload a file...</button>}
       </UploadButton>
       <UploadDropzone
