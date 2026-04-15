@@ -1,6 +1,6 @@
 import { useObjectDep } from "@bytescale/upload-widget-react/hooks/UseObjectDep";
 import { useEffect, useState } from "react";
-import { UploadWidgetConfig, UploadWidgetMethods } from "@bytescale/upload-widget";
+import { type UploadWidgetConfig, type UploadWidgetMethods } from "@bytescale/upload-widget";
 
 export function useAutoUpdatingOptions(options: UploadWidgetConfig): UploadWidgetConfig {
   const [methods, setMethods] = useState<UploadWidgetMethods | undefined>(undefined);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { UploadWidgetOnPreUploadResult } from "@bytescale/upload-widget";
+import { type UploadWidgetOnPreUploadResult } from "@bytescale/upload-widget";
 import { UploadButton, UploadDropzone } from "@bytescale/upload-widget-react";
 
 /**
@@ -12,8 +12,12 @@ export default (): JSX.Element => {
   const [ticks, setTicks] = useState(0);
 
   useEffect(() => {
-    const handle = setInterval(() => setTicks(x => x + 1), 1000);
-    return () => clearInterval(handle);
+    const handle = setInterval(() => {
+      setTicks(x => x + 1);
+    }, 1000);
+    return () => {
+      clearInterval(handle);
+    };
   }, []);
 
   return (
@@ -30,7 +34,9 @@ export default (): JSX.Element => {
 
       <UploadButton
         options={{ apiKey: "free", multi: true }}
-        onUpdate={x => setFiles(x.uploadedFiles.map(x => x.fileUrl))}
+        onUpdate={x => {
+          setFiles(x.uploadedFiles.map(x => x.fileUrl));
+        }}
       >
         {({ onClick }) => <button onClick={onClick}>Upload a file...</button>}
       </UploadButton>
@@ -47,7 +53,9 @@ export default (): JSX.Element => {
             return Math.random() < 0.5 ? undefined : { errorMessage: "Hello" };
           }
         }}
-        onUpdate={x => setFiles(x.uploadedFiles.map(x => x.fileUrl))}
+        onUpdate={x => {
+          setFiles(x.uploadedFiles.map(x => x.fileUrl));
+        }}
       />
     </>
   );

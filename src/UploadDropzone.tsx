@@ -3,11 +3,11 @@ import { useElementRef } from "./hooks/UseElementRef";
 import { useAutoUpdatingOptions } from "@bytescale/upload-widget-react/hooks/UseAutoUpdatingOptions";
 import {
   UploadWidget,
-  UploadWidgetConfig,
-  UploadWidgetResult,
-  UploadWidgetOnUpdateEvent
+  type UploadWidgetConfig,
+  type UploadWidgetResult,
+  type UploadWidgetOnUpdateEvent
 } from "@bytescale/upload-widget";
-import { UploadWidgetReactConfig } from "@bytescale/upload-widget-react/UploadWidgetReactConfig";
+import { type UploadWidgetReactConfig } from "@bytescale/upload-widget-react/UploadWidgetReactConfig";
 
 export type UploadDropzoneConfig = Omit<UploadWidgetReactConfig, "container">;
 
@@ -50,7 +50,9 @@ export const UploadDropzone = ({
               onComplete(files);
             }
           },
-          error => console.error("Uploader error.", error)
+          error => {
+            console.error("Uploader error.", error);
+          }
         );
       }
     }, [element]);

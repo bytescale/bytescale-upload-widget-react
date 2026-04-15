@@ -1,4 +1,4 @@
-import { UploadWidgetConfig } from "@bytescale/upload-widget";
+import { type UploadWidgetConfig } from "@bytescale/upload-widget";
 
 /**
  * The Bytescale Upload Widget for React uses the same options as the underlying Bytescale Upload Widget (for JavaScript), with the following exceptions:

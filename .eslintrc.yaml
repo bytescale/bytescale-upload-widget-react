@@ -64,7 +64,6 @@ rules:
           - "private-static-method"
           - "private-decorated-method"
           - "private-instance-method"
-          - "private-abstract-method"
           - "private-method"
 
           - "static-method"
@@ -114,7 +113,6 @@ rules:
           - "private-static-method"
           - "private-decorated-method"
           - "private-instance-method"
-          - "private-abstract-method"
           - "private-method"
 
           - "static-method"
@@ -127,6 +125,5 @@ rules:
 extends:
   - standard-with-typescript
   - prettier
-  - prettier/@typescript-eslint
 env:
   node: true

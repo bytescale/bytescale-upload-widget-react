@@ -1,7 +1,8 @@
 /* eslint @typescript-eslint/no-var-requires: 0 */
 const config = require("./webpack.config.js");
-const version = require("./package.json").version;
-const majorVersion = parseInt(version.split(".")[0]);
+const packageJson = /** @type {{ version?: string }} */ (require("./package.json"));
+const version = packageJson.version ?? "";
+const majorVersion = Number.parseInt(version.split(".")[0] ?? "", 10);
 
 if (isNaN(majorVersion)) {
   throw new Error("Unable to parse version number in package.json");

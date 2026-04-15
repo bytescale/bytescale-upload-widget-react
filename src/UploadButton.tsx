@@ -1,12 +1,12 @@
 import { useAutoUpdatingOptions } from "@bytescale/upload-widget-react/hooks/UseAutoUpdatingOptions";
 import {
   UploadWidget,
-  UploadWidgetConfig,
-  UploadWidgetOnUpdateEvent,
-  UploadWidgetResult
+  type UploadWidgetConfig,
+  type UploadWidgetOnUpdateEvent,
+  type UploadWidgetResult
 } from "@bytescale/upload-widget";
-import { UploadWidgetReactConfig } from "@bytescale/upload-widget-react/UploadWidgetReactConfig";
-import { BasicMouseEvent } from "@bytescale/upload-widget-react/BasicMouseEvent";
+import { type UploadWidgetReactConfig } from "@bytescale/upload-widget-react/UploadWidgetReactConfig";
+import { type BasicMouseEvent } from "@bytescale/upload-widget-react/BasicMouseEvent";
 
 export type UploadButtonConfig = UploadWidgetReactConfig;
 
@@ -33,7 +33,9 @@ export const UploadButton = ({ options, onComplete, onUpdate, children }: Upload
           onComplete(files);
         }
       },
-      error => console.error("Uploader error.", error)
+      error => {
+        console.error("Uploader error.", error);
+      }
     );
   };
 
