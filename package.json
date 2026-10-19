@@ -79,8 +79,8 @@
     "lodash.isequal": "^4.5.0"
   },
   "devDependencies": {
-    "@babel/core": "7.24.1",
-    "@babel/preset-env": "7.24.1",
+    "@babel/core": "7.29.7",
+    "@babel/preset-env": "7.29.7",
     "@babel/preset-react": "7.24.1",
     "@types/enzyme": "3.10.11",
     "@types/enzyme-adapter-react-16": "^1.0.6",
@@ -102,20 +102,29 @@
     "eslint-plugin-promise": "6.6.0",
     "eslint-plugin-return-types-object-literals": "1.0.1",
     "husky": "7.0.4",
-    "jest": "30.3.0",
-    "jest-environment-jsdom": "30.3.0",
+    "jest": "30.5.2",
+    "jest-environment-jsdom": "30.5.2",
     "lint-staged": "16.4.0",
     "prettier": "2.8.8",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "resize-observer-polyfill": "1.5.1",
-    "ts-jest": "29.4.9",
-    "ts-loader": "9.5.7",
-    "tsc-alias": "1.8.16",
+    "ts-jest": "29.4.15",
+    "ts-loader": "9.6.2",
+    "tsc-alias": "1.9.8",
     "typescript": "4.7.4",
-    "webpack": "5.106.1",
-    "webpack-cli": "5.1.4",
-    "webpack-dev-server": "5.2.3",
-    "webpack-node-externals": "2.5.2"
+    "webpack": "5.112.0",
+    "webpack-cli": "7.2.3",
+    "webpack-dev-server": "6.1.0",
+    "webpack-node-externals": "2.5.2",
+    "@types/node": "16.18.77"
+  },
+  "overrides": {
+    "brace-expansion@1": "1.1.21",
+    "brace-expansion@2": "2.1.7",
+    "@types/node": "$@types/node",
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^9.0.7"
+    }
   }
 }
